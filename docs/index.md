@@ -3,34 +3,34 @@ layout: home
 layoutClass: 'm-home-layout'
 
 hero:
-  name: 茂茂的
-  text: 前端导航模板
-  tagline: 基于 VitePress 的个人前端导航页面模板
+  name: Abp VNext Pro
+  text: 企业级管理系统框架
+  tagline: 全新升级，开箱即用，简单高效.
   image:
     src: /logo.png
-    alt: 茂茂物语
+    alt: Abp VNext Pro
   actions:
-    - text: 茂茂物语
+    - text: 快速开始
       link: https://notes.fe-mm.com
-    - text: 前端导航
+    - text: 在线预览
       link: /nav/
       theme: alt
-    - text: mmPlayer
-      link: https://netease-music.fe-mm.com
+    - text: GitHub
+      link: https://github.com/WangJunZzz/abp-vnext-pro
     - text: 测试页
       link: /test
       theme: alt
 features:
   - icon: 📖
-    title: 前端物语
-    details: 整理前端常用知识点<small>（面试八股文）</small><br />如有异议按你的理解为主，不接受反驳
-    link: https://notes.fe-mm.com/fe/javascript/types
-    linkText: 前端常用知识
+    title: Vben5官方文档
+    details: 最新技术栈<small>Vue3、Pinia、TypeScript等最新技术站</small><br />丰富的主题配置
+    link: https://doc.vben.pro/
+    linkText: Vben5官方文档
   - icon: 📘
-    title: 源码阅读
+    title: Abp官方文档
     details: 了解各种库的实现原理<br />学习其中的小技巧和冷知识
-    link: https://notes.fe-mm.com/analysis/utils/only-allow
-    linkText: 源码阅读
+    link: https://abp.io/docs/latest/
+    linkText: Abp官方文档
   - icon: 💡
     title: Workflow
     details: 在工作中学到的一切<small>（常用库/工具/奇淫技巧等）</small><br />配合 CV 大法来更好的摸鱼
@@ -38,9 +38,9 @@ features:
     linkText: 常用工具库
   - icon: 🧰
     title: 提效工具
-    details: 工欲善其事，必先利其器<br />记录开发和日常使用中所用到的软件、插件、扩展等
+    details: 工欲善其事，必先利其器<br />代码生成器Abp VNext Pro Suite
     link: https://notes.fe-mm.com/efficiency/online-tools
-    linkText: 提效工具
+    linkText: 代码生成器
   - icon: 🐞
     title: 踩坑记录
     details: 那些年我们踩过的坑<br />总有一些让你意想不到的问题

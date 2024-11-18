@@ -18,20 +18,20 @@
 
 ```ts
 hero:
-  name: 茂茂的 //左侧第一行
-  text: 个人前端导航  //左侧第二行
-  tagline: 使用 VitePress 打造个人前端导航  //第三行小注内容
+  name: AbpVNextPro //左侧第一行
+  text: 企业级管理系统框架  //左侧第二行
+  tagline: 全新升级，开箱即用，简单高效  //第三行小注内容
   image:
     src: /logo.png //页面大图地址（图像最好切圆后使用）
-    alt: 茂茂物语
+    alt: AbpVNextPro
   actions:  //跳转按钮，可按需增减
-    - text: 茂茂物语
+    - text: 
       link: https://notes.fe-mm.com
-    - text: 前端导航
+    - text: 快速开始
       link: /nav/
       theme: alt  //此行代表跳转至新标签页显示
-    - text: mmPlayer
-      link: https://netease-music.fe-mm.com
+    - text: GitHub
+      link: https://github.com/WangJunZzz/abp-vnext-pro
       theme: alt
 features:
   - icon: 📖  //图标（输入法的表情icon即可）

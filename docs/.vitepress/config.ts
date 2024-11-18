@@ -11,8 +11,8 @@ export default defineConfig({
   base: 'https://abp-vnext-pro.github.io/',
 
   lang: 'zh-CN',
-  title: '茂茂物语',
-  description: '茂茂的成长之路，包含前端常用知识、源码阅读笔记、各种奇淫技巧、日常提效工具等',
+  title: 'Abp-VNext-Pro',
+  description: '企业级管理系统框架,全新升级，开箱即用，简单高效.',
   head,
 
   lastUpdated: true,
@@ -38,11 +38,11 @@ export default defineConfig({
       label: '目录',
     },
 
-    socialLinks: [{ icon: 'github', link: 'https://github.com/maomao1996/vitepress-nav-template' }],
+    socialLinks: [{ icon: 'github', link: 'https://github.com/WangJunZzz/abp-vnext-pro' }],
 
     footer: {
       message: '如有转载或 CV 的请标注本站原文地址',
-      copyright: 'Copyright © 2019-present maomao',
+      copyright: 'Copyright © 2024-wangjunzzz',
     },
 
     lastUpdated: {
