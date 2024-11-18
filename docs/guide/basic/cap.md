@@ -47,4 +47,46 @@ public override void ConfigureServices(ServiceConfigurationContext context)
 }
 ```
 
-- 即可使用 Abp vNext 标准写法,发送分布式事件和订阅事件
+## 发布事件
+```csharp
+namespace AbpDemo
+{
+    public class MyService : ITransientDependency
+    {
+        private readonly IDistributedEventBus _distributedEventBus;
+
+        public MyService(IDistributedEventBus distributedEventBus)
+        {
+            _distributedEventBus = distributedEventBus;
+        }
+        
+        public virtual async Task ChangeStockCountAsync(Guid productId, int newCount)
+        {
+            await _distributedEventBus.PublishAsync(
+                new StockCountChangedEto
+                {
+                    ProductId = productId,
+                    NewCount = newCount
+                }
+            );
+        }
+    }
+}
+
+```
+
+## 订阅事件
+```csharp
+namespace AbpDemo
+{
+    public class MyHandler
+        : IDistributedEventHandler<StockCountChangedEto>,
+          ITransientDependency
+    {
+        public async Task HandleEventAsync(StockCountChangedEto eventData)
+        {
+            var productId = eventData.ProductId;
+        }
+    }
+}
+```
