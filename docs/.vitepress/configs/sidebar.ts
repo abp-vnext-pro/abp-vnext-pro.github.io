@@ -22,20 +22,37 @@ function sidebarGuide(): DefaultTheme.SidebarItem[]{
               { link: 'quick-start', text: '快速开始' },
             ],
           },
-        //   {
-        //     collapsed: false,
-        //     text: '基础',
-        //     items: [
-        //       {
-        //         link: 'about',
-        //         text: '关于ABP VNext 11Pro',
-        //       },
-        //       {
-        //         link: 'wyh',
-        //         text: '为什么选择我们111?',
-        //       },
-        //       { link: 'quick-start', text: '快速开始' },
-        //     ],
-        //   },
+          {
+            collapsed: false,
+            text: '基础',
+            items: [
+              {
+                link: 'basic/authorization',
+                text: '权限',
+              }
+            ],
+          },
+          {
+            collapsed: false,
+            text: '模块',
+            items: [
+              {
+                link: 'modules/basic',
+                text: '基础模块',
+              },
+              {
+                link: 'modules/dic',
+                text: '数据字典模块',
+              },
+              {
+                link: 'modules/signalr',
+                text: '通知模块',
+              },
+              {
+                link: 'modules/language',
+                text: '语言模块',
+              },
+            ],
+          },
     ]
 }
