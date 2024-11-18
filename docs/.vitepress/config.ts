@@ -70,10 +70,10 @@ export default defineConfig({
     // },
 
     comment: {
-      repo: 'maomao1996/vitepress-nav-template',
-      repoId: 'R_kgDOJC09Jg',
+      repo: 'abp-vnext-pro/abp-vnext-pro.github.io',
+      repoId: 'R_kgDONQ4OeA',
       category: 'Announcements',
-      categoryId: 'DIC_kwDOJC09Js4Cekn0',
+      categoryId: 'DIC_kwDONQ4OeM4CkXJW',
     },
   },
 

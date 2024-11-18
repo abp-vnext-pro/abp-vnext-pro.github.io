@@ -11,15 +11,15 @@ hero:
     alt: Abp VNext Pro
   actions:
     - text: 快速开始
-      link: https://notes.fe-mm.com
+      link: /guide/quick-start
     - text: 在线预览
-      link: /nav/
+      link: http://182.43.18.151:44320/
       theme: alt
     - text: GitHub
       link: https://github.com/WangJunZzz/abp-vnext-pro
-    - text: 测试页
-      link: /guide/quick-start
-      theme: alt
+    # - text: 测试页
+    #   link: /guide/quick-start
+    #   theme: alt
 features:
   - icon: 📖
     title: Vben5官方文档
