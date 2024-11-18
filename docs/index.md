@@ -18,7 +18,7 @@ hero:
     - text: GitHub
       link: https://github.com/WangJunZzz/abp-vnext-pro
     - text: 测试页
-      link: /test
+      link: /guide/quick-start
       theme: alt
 features:
   - icon: 📖

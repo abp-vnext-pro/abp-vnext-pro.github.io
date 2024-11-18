@@ -8,7 +8,7 @@ const APP_BASE_PATH = basename(process.env.GITHUB_REPOSITORY || '')
 
 export default defineConfig({
   outDir: '../dist',
-  base: 'https://abp-vnext-pro.github.io/',
+  //base: 'https://abp-vnext-pro.github.io/',
 
   lang: 'zh-CN',
   title: 'Abp-VNext-Pro',
@@ -65,9 +65,9 @@ export default defineConfig({
     darkModeSwitchTitle: '切换到深色模式',
 
     /*** 自定义配置 ***/
-    visitor: {
-      badgeId: 'maomao1996.vitepress-nav-template',
-    },
+    // visitor: {
+    //   //badgeId: 'maomao1996.vitepress-nav-template',
+    // },
 
     comment: {
       repo: 'maomao1996/vitepress-nav-template',
