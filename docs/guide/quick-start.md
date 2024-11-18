@@ -7,41 +7,52 @@ outline: deep
 ## 前置准备
 
 ::: info 环境要求
-
 在启动项目前，你需要确保你的环境满足以下要求：
+- [dotnet core 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
+- [nodejs 20.15.0+](https://nodejs.org/zh-cn/)
+- [pnpm](https://www.pnpm.cn/installation)
+- [mysql](https://dev.mysql.com/downloads/installer/)
+- [redis](https://redis.io/docs/getting-started/installation/)
+- [rabbitmq 可选](https://www.rabbitmq.com/download.html)
 
-- [Node.js](https://nodejs.org/en) 20.15.0 及以上版本，推荐使用 [fnm](https://github.com/Schniz/fnm) 、 [nvm](https://github.com/nvm-sh/nvm) 或者直接使用[pnpm](https://pnpm.io/cli/env) 进行版本管理。
-- [Git](https://git-scm.com/) 任意版本。
+:::
 
-验证你的环境是否满足以上要求，你可以通过以下命令查看版本：
+## 后端
+### 安装 CLI 工具
+```bash
+dotnet tool install Lion.AbpPro.Cli -g
+```
+### 创建项目
 
 ```bash
-# 出现相应 node LTS版本即可
-node -v
-# 出现相应 git 版本即可
-git -v
+lion.abp new -t pro -c 公司名称 -p 项目名称  -o 输出路径(可选)
+lion.abp new -t pro.all -c 公司名称 -p 项目名称  -o 输出路径(可选)
+lion.abp new -t pro.module -c 公司名称 -p 项目名称  -m 模块名称  -o 输出路径(可选)
 ```
+:::
+
+::: danger 注意
+VS 编译项目字符串超过 256 个字符,把项目拷贝到磁盘根目录 OR 使用 Rider 开发
+:::
+
+### 后端修改配置
+- 修改 HttpApi.Host-> appsettings.json 配置
+  - Mysql 连接字符串
+  - Redis 连接字符串
+  - RabbitMQ 连接字符串(可选)
+- 修改 DbMigrator-> appsettings.json 数据库连接字符串
+- 右键单击.DbMigrator 项目,设置为启动项目运行，按 F5(或 Ctrl + F5) 运行应用程序
+
+::: danger 注意
+
+初始的种子数据在数据库中创建了 admin 用户(密码为1q2w3E*) 用于登录应用程序. 所以, 对于新数据库至少使用 .DbMigrator 一次.
 
 :::
 
-## 启动项目
 
-### 获取源码
+## 前端Vben2.8
 
-::: code-group
-
-```sh [GitHub]
-# clone 代码
-git clone https://github.com/vbenjs/vue-vben-admin.git
-```
-
-```sh [Gitee]
-# clone 代码
-# Gitee 的代码可能不是最新的
-git clone https://gitee.com/annsion/vue-vben-admin.git
-```
-
-:::
+在你的代码目录内打开终端，并执行以下命令:
 
 ::: danger 注意
 
@@ -49,63 +60,52 @@ git clone https://gitee.com/annsion/vue-vben-admin.git
 
 :::
 
-### 安装依赖
-
-在你的代码目录内打开终端，并执行以下命令:
+### 获取源码项目
+- 代码生成的文件夹下Vben28
 
 ```bash
 # 进入项目目录
-cd vue-vben-admin
-
-# 使用项目指定的pnpm版本进行依赖安装
-corepack enable
+cd vben28
 
 # 安装依赖
 pnpm install
+
+# 启动项目
+pnpm run dev
 ```
 
-::: tip 注意
+## 前端Vben5
 
-- 项目只支持使用 `pnpm` 进行依赖安装，默认会使用 `corepack` 来安装指定版本的 `pnpm`。:
-- 如果你的网络环境无法访问npm源，你可以设置系统的环境变量`COREPACK_REGISTRY=https://registry.npmmirror.com`，然后再执行`pnpm install`。
-- 如果你不想使用`corepack`，你需要禁用`corepack`，然后使用你自己的`pnpm`进行安装。
+在你的代码目录内打开终端，并执行以下命令:
+
+::: danger 注意
+
+注意存放代码的目录及所有父级目录不能存在中文、韩文、日文以及空格，否则安装依赖后启动会出错。
 
 :::
 
-### 运行项目
+::: tip 注意
 
-#### 选择项目
+- Vben5 版本的前端项目,需要找作者购买源码
+- 联系方式: 510423039@qq.com
+- 微信号：WJLXRzzZ
+- 微信号：LX2668812066
+:::
+
+### 获取源码项目
+
+```bash
+git clone https://github.com/abp-vnext-pro/abp-vnext-pro-vben5.git
+```
+
 
 执行以下命令运行项目:
 
 ```bash
-# 启动项目
-pnpm dev
-```
+# 在项目根目录下执行
+pnpm i
 
-此时，你会看到类似如下的输出，选择你需要运行的项目：
-
-```bash
-│
-◆  Select the app you need to run [dev]:
-│  ○ @vben/web-antd
-│  ○ @vben/web-ele
-│  ○ @vben/web-naive
-│  ○ @vben/docs
-│  ● @vben/playground
-└
-```
-
-现在，你可以在浏览器访问 `http://localhost:5555` 查看项目。
-
-#### 运行指定项目
-
-如果你不想选择项目，可以直接运行以下命令运行你需要的应用：
-
-```bash
+# 运行指定项目 and版本(apps/web-antd)
 pnpm run dev:antd
-pnpm run dev:ele
-pnpm run dev:naive
-pnpm run dev:docs
-pnpm run dev:play
 ```
+

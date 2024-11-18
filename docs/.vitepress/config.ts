@@ -11,7 +11,7 @@ export default defineConfig({
   //base: 'https://abp-vnext-pro.github.io/',
 
   lang: 'zh-CN',
-  title: 'Abp-VNext-Pro',
+  title: 'Abp VNext Pro',
   description: '企业级管理系统框架,全新升级，开箱即用，简单高效.',
   head,
 
