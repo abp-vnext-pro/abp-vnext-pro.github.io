@@ -4,13 +4,6 @@ outline: deep
 
 # 授权
 
-## Authorize Attribute
-
-- ABP 扩展了[ASP.NET Core 授权](https://docs.microsoft.com/zh-cn/aspnet/core/security/authorization/introduction), 将权限添加为自动[策略](https://docs.microsoft.com/zh-cn/aspnet/core/security/authorization/policies)并且使授权系统在 [应用服务](Application-Services.md) 同样可用.
-
-- ASP.NET Core 定义了 [Authorize](https://docs.microsoft.com/zh-cn/aspnet/core/security/authorization/simple)特性用于在控制器,控制器方法以及页面上授权. 现在 ABP 将它带到了[应用服务](Application-Services.md).
-
-
 ## 后端
 示例:
 ```csharp
