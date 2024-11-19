@@ -1,3 +1,7 @@
+---
+outline: deep
+---
+
 # 设置管理
 
 [官方 Setting 模块参考文档](https://docs.abp.io/zh-Hans/abp/latest/Settings)
@@ -9,7 +13,10 @@
 
 使用设置之前需要定义它. ABP 是 模块化的, 不同的模块可以拥有不同的设置. 只需要实现 SettingDefinitionProvider 类既可. 示例如下:
 
-!!! info "和官方 Setting 模块区别，值添加了 2 个属性，一个分组，一个组件类型"
+::: tip 注意
+- 和官方 Setting 模块区别，值添加了 2 个属性，一个分组，一个组件类型
+:::
+
 
 ```csharp
 public class CustomSettingProvider : SettingDefinitionProvider
@@ -30,9 +37,20 @@ public class CustomSettingProvider : SettingDefinitionProvider
     }
 }
 ```
+```csharp
+/// <summary>
+/// 前端控件类型
+/// </summary>
+public static class ControlType
+{
+    public const string Default = "Type";
+    public const string TypeText = "Text";
+    public const string TypeCheckBox = "CheckBox";
+    public const string Number = "Number";
+}
+```
 
 - SettingDefinition 类具有以下属性:
-
   - Name: 应用程序中设置的唯一名称. 是具有约束的唯一属性, 在应用程序获取/设置此设置的值 (设置名称定义为常量而不是魔法字符串是个好主意).
   - DefaultValue: 设置的默认值.
   - DisplayName: 本地化的字符串,用于在 UI 上显示名称.
@@ -88,5 +106,3 @@ public class MyService
 - GlobalSettingValueProvider: 获取设置的全局值.
 - TenantSettingValueProvider: 获取当前租户的设置值.
 - UserSettingValueProvider: 获取当前用户的设置值.
-
-> 设置回退系统从底部 (用户) 到 顶部(默认) 方向起作用.

@@ -53,7 +53,7 @@ namespace Acme.BookStore
 
 `IMultiTenant` 接口定义了 `TenantId` 属性用于自动过滤当前租户实体. 更多信息参见[多租户]文档.
 
-## IDataFilter 服务: 启用/禁用 数据过滤
+## 查询已删除的数据
 
 你可以使用 `IDataFilter` 服务控制数据过滤.
 

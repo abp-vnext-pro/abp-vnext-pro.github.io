@@ -86,6 +86,7 @@ namespace AbpDemo
         public async Task HandleEventAsync(StockCountChangedEto eventData)
         {
             var productId = eventData.ProductId;
+            // todo: 处理事件
         }
     }
 }

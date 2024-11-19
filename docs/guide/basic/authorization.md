@@ -2,9 +2,30 @@
 outline: deep
 ---
 
-# 授权
-
+# 权限
 ## 后端
+### 定义权限
+- 在Application.Contracts的Permissions定义权限
+- 创建一个继承自 `BookStorePermissionDefinitionProvider` 的类,如下所示:
+```csharp
+namespace Acme.BookStore.Permissions
+{
+    public class BookStorePermissionDefinitionProvider : PermissionDefinitionProvider
+    {
+        public override void Define(IPermissionDefinitionContext context)
+        {
+            var myGroup = context.AddGroup("BookStore");
+            myGroup.AddPermission("BookStore_Author_Create");
+        }
+    }
+}
+
+```
+::: danger 注意
+ABP 会自动发现这个类,不需要进行配置!
+:::
+
+### 设置接口权限
 示例:
 ```csharp
 namespace Acme.BookStore
@@ -34,31 +55,11 @@ namespace Acme.BookStore
 ```
 - `Authorize`用户必须登陆到应用程序才可以访问 `AuthorAppService` 中的方法. 所以`GetListAsync` 方法仅可用于通过身份验证的用户.
 - `AllowAnonymous` 禁用身份验证. 所以 `GetAsync` 方法任何人都可以访问,包括未授权的用户.
-- `[Authorize("BookStore_Author_Create")]` 定义了一个策略 (参阅 [基于策略的授权](https://docs.microsoft.com/zh-cn/aspnet/core/security/authorization/policies)),它用于检查当前用户的权限."BookStore_Author_Create" 是一个策略名称. 如果你想要使用策略的授权方式,需要在 ASP.NET Core 授权系统中预先定义它.
+- `[Authorize("BookStore_Author_Create")]` 定义了一个策略 (参阅 [基于策略的授权](https://docs.microsoft.com/zh-cn/aspnet/core/security/authorization/policies)),它用于检查当前用户的权限."BookStore_Author_Create"
 
-## 定义权限
-创建一个继承自 `PermissionDefinitionProvider` 的类,如下所示:
 
-```csharp
 
-namespace Acme.BookStore.Permissions
-{
-    public class BookStorePermissionDefinitionProvider : PermissionDefinitionProvider
-    {
-        public override void Define(IPermissionDefinitionContext context)
-        {
-            var myGroup = context.AddGroup("BookStore");
-
-            myGroup.AddPermission("BookStore_Author_Create");
-        }
-    }
-}
-```
-::: danger 注意
-ABP 会自动发现这个类,不需要进行配置!
-:::
-
-## 多租户
+### 多租户
 
 在定义新权限时可以设置多租户选项. 有下面三个值:
 
@@ -74,15 +75,20 @@ ABP 会自动发现这个类,不需要进行配置!
 myGroup.AddPermission(
     "BookStore_Author_Create",
     LocalizableString.Create<BookStoreResource>("Permission:BookStore_Author_Create"),
-    multiTenancySide: MultiTenancySides.Tenant //set multi-tenancy side!
+    multiTenancySide: MultiTenancySides.Tenant 
 );
 ```
 
 ## 前端权限
+::: tip 注意
+- 前端登录成功之后调用/api/abp/application-configuration接口获取当前用户的权限信息，并根据权限信息控制页面的显示和按钮的显示。
+- auth.grantedPolicies下有当前用户的所有权限code。
+:::
+
 ### 菜单权限
 
 ::: code-group
-```ts [Vben28]
+```ts [Vben2.8]
 import type { AppRouteModule } from "/@/router/types";
 import { LAYOUT } from "/@/router/constant";
 import { t } from "/@/hooks/web/useI18n";
@@ -165,7 +171,7 @@ export default routes;
 ### 按钮权限
 
 ::: code-group
-```ts [Vben28]
+```ts [Vben2.8]
 <template>
   <div>
     <BasicTable @register="registerTable" size="small">

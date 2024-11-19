@@ -17,9 +17,9 @@ hero:
       theme: alt
     - text: GitHub
       link: https://github.com/WangJunZzz/abp-vnext-pro
-    # - text: 测试页
-    #   link: /guide/quick-start
-    #   theme: alt
+    - text: 视频教程
+      link: https://www.bilibili.com/video/BV1pt4y1E7aZ/?spm_id_from=333.337.search-card.all.click&vd_source=963e10b4fc37556dd738bd98e1d46a0f
+      theme: alt
 features:
   - icon: 📖
     title: Vben5官方文档
