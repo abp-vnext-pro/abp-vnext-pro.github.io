@@ -33,7 +33,7 @@ lion.abp new -t pro -c 公司名称 -p 项目名称  -o 输出路径(可选)
 lion.abp new -t pro.all -c 公司名称 -p 项目名称  -o 输出路径(可选)
 lion.abp new -t pro.module -c 公司名称 -p 项目名称  -m 模块名称  -o 输出路径(可选)
 ```
-:::
+
 
 ::: danger 注意
 VS 编译项目字符串超过 256 个字符,把项目拷贝到磁盘根目录 OR 使用 Rider 开发
