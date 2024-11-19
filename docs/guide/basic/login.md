@@ -3,11 +3,12 @@ outline: deep
 ---
 
 # 登录
-
-ABP vNext Pro 没有集成 IdentityServer4 或者 OpenIddict,而是直接使用默认的 Asp Net Core Identity。
-
+::: tip 注意
+- ABP vNext Pro 没有集成 IdentityServer4 或者 OpenIddict,而是直接使用默认的 Asp Net Core Identity。
 - 减少系统复杂度
-- 大部分(IdentityServer4|OpenIddict)功能用不上
+- 会对接第三方登录，如：微信、QQ、微博等只要实现了 OAuth2 协议即可
+:::
+
 
 ## 登录接口
 
