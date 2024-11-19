@@ -11,7 +11,7 @@ outline: deep
 
 ## 赞助
 如果你觉得这个项目对你有帮助，你可以帮作者买一杯咖啡表示支持!
-![](../img/donate.png)
+![](https://lion-abp-pro.oss-cn-shenzhen.aliyuncs.com/foods/1865124ad6d3436b93815a33ce7efa78_donate.png)
 
 ## 为爱发电
 您的赞助将帮助我们：

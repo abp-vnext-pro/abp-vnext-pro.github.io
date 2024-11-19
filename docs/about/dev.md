@@ -11,6 +11,6 @@ outline: deep
 - 通过邮箱联系开发者： [510423039@qq.com](510423039@qq.com)
 - 通过微信联系开发者：
 
- <img src="../img/wechat.png" style="width: 300px;"/>
+ <img src="https://lion-abp-pro.oss-cn-shenzhen.aliyuncs.com/foods/aecf1b7ec766480a9ed515c9a1e057e2_wechat.png" style="width: 300px;"/>
 
 我们会在第一时间回复您，定制费用根据需求而定。
