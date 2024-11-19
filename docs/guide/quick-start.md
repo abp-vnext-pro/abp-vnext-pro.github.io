@@ -68,7 +68,7 @@ VS 编译项目字符串超过 256 个字符,把项目拷贝到磁盘根目录 O
   } 
 ```  
 - 右键单击.DbMigrator 项目,设置为启动项目运行，按 F5(或 Ctrl + F5) 运行应用程序
-- 启动后端service下的host项目，访问后台 http://localhost:44315/login
+- 启动后端service下的host项目，访问后台 `http://localhost:44315/login`
 - 登录账号密码 <span style="color:red;font-size:22px">admin/1q2w3E*</span>
 
 
@@ -106,7 +106,7 @@ pnpm run dev
 ### 访问
 
 ::: tip 注意
-- 访问 http://localhost:4200
+- 访问 `http://localhost:4200`
 - Vben2.8版本本地调试首次访问会比较慢，长达几分钟，请耐心等待(Vben5已解决)。
 - 登录账号密码 admin/1q2w3E*
 :::
@@ -148,6 +148,6 @@ pnpm run dev:antd
 ### 访问
 
 ::: tip 注意
-- 访问 http://localhost:4200
+- 访问 `http://localhost:4200`
 - 登录账号密码 admin/1q2w3E*
 :::
