@@ -4,6 +4,8 @@ outline: deep
 
 # 种子数据
 
+- [ABP vNext种子数据官方文档](https://abp.io/docs/latest/framework/infrastructure/data-seeding)
+
 ## 介绍
 
 - 使用数据库的某些应用程序(或模块),可能需要有一些初始数据才能够正常启动和运行. 例如管理员用户和角色必须在一开始就可用. 否则你就无法登录到应用程序创建新用户和角色.

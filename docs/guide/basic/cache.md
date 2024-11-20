@@ -3,9 +3,9 @@ outline: deep
 ---
 
 # 缓存
-
-ABP 框架扩展了 [ASP.NET Core 的分布式缓存系统](https://docs.microsoft.com/en-us/aspnet/core/performance/caching/distributed).
-ABP vNext Pro 已集成 Redis 做为缓存。
+- ABP 框架扩展了 [ASP.NET Core 的分布式缓存系统](https://docs.microsoft.com/en-us/aspnet/core/performance/caching/distributed).
+- ABP vNext Pro 已集成 Redis 做为缓存。
+- [ABP vNext缓存官方文档](https://abp.io/docs/latest/framework/fundamentals/caching)
 
 ## 配置
 

@@ -50,9 +50,10 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
           link: 'basic/setting',
           text: '设置管理',
         },
+  
         {
-          link: 'basic/batch',
-          text: '数据库批量操作',
+          link: 'basic/event-bus-local',
+          text: '本地事件',
         },
         {
           link: 'basic/cap',
@@ -66,7 +67,10 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
           link: 'basic/dataseeding',
           text: '种子数据',
         },
-
+        {
+          link: 'basic/distributed-locking',
+          text: '分布式锁',
+        },
       ],
     },
     {
@@ -95,6 +99,10 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
       collapsed: false,
       text: '扩展',
       items: [
+        {
+          link: 'basic/batch',
+          text: 'EF批量操作',
+        },
         {
           link: 'basic/freesql',
           text: 'FreeSql',

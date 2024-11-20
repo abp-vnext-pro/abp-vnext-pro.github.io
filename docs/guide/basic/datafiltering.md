@@ -3,8 +3,7 @@ outline: deep
 ---
 
 # 数据过滤
-
-[Volo.Abp.Data](https://www.nuget.org/packages/Volo.Abp.Data) 包定义了在查询数据库时自动过滤数据的服务.
+- [ABP vNext数据过滤官方文档](https://abp.io/docs/latest/framework/infrastructure/data-filtering)
 
 ## 预定义的过滤
 
