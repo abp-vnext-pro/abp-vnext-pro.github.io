@@ -86,8 +86,8 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
           text: '数据字典模块',
         },
         {
-          link: 'modules/signalr',
-          text: '通知模块',
+          link: 'modules/notification',
+          text: '站内信模块',
         },
         {
           link: 'modules/language',
