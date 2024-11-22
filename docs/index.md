@@ -40,7 +40,7 @@ features:
     title: 提效工具
     details: 工欲善其事，必先利其器<br />代码生成器Abp VNext Pro Suite
     link: https://github.com/WangJunZzz/abp-vnext-pro-suite
-    linkText: 代码生成器
+    linkText:  前端接口自动生成,代码生成器
   - icon: 🐞
     title: 踩坑记录
     details: 那些年我们踩过的坑<br />总有一些让你意想不到的问题

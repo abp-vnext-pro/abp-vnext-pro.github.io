@@ -7,7 +7,12 @@ outline: deep
 * 价格：**499**元(前20名**199**即可获取)
 * 支付成功后，请联系作者获取下载链接
 * 也可以先加微信，微信号：WJLXRzzZ，备注：Vben5 购买
+
+### 付款方式
 ![](https://lion-abp-pro.oss-cn-shenzhen.aliyuncs.com/foods/1865124ad6d3436b93815a33ce7efa78_donate.png)
+
+### 作者微信
+![](https://lion-abp-pro.oss-cn-shenzhen.aliyuncs.com/foods/aecf1b7ec766480a9ed515c9a1e057e2_wechat.png)
 
 ### 付费权益
 * 微信会员交流群

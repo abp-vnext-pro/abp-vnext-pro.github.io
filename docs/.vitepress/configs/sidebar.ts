@@ -70,6 +70,10 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
         {
           link: 'basic/distributed-locking',
           text: '分布式锁',
+        },   
+        {
+          link: 'basic/switchdatatabse',
+          text: '切换数据库',
         },
       ],
     },
@@ -118,7 +122,7 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
         {
           link: 'basic/elastic',
           text: 'Elastic',
-        },
+        }
       ],
     },
     {
