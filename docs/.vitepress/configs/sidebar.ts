@@ -130,5 +130,10 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
       text: '部署',
       items: [{ link: 'deploy/docker', text: 'Docker部署' }],
     },
+    {
+      collapsed: false,
+      text: '其它',
+      items: [{ link: 'basic/update', text: 'Vben5更新' }],
+    },
   ]
 }
