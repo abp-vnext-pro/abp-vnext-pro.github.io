@@ -19,6 +19,9 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
         //     text: '为什么选择我们?',
         //   },
         { link: 'quick-start', text: '快速开始' },
+        { link: 'quick-dev', text: '快速开发' },
+        { link: 'quick-ddd', text: '领域驱动设计' },
+     
       ],
     },
     {
