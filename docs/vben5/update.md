@@ -5,9 +5,6 @@ outline: deep
 # Vben5更新
 - vben5的项目无法像插件或者安装包那样直接更新，你使用代码后，会根据业务需求，进行二次开发，需要自行手动合并升级。
 
-# 我需要怎么做
-项目采用了 Monorepo 的方式进行管理，并将一些比较核心的代码进行了抽离，比如 packages/@core、packages/effects，只要业务代码没有修改这部分代码，那么你可以直接拉取最新代码，然后合并到你的分支上，只需要简单的处理部分冲突即可。其余文件夹只会进行一些小的调整，不会对业务代码产生影响。
-
 ::: tip 推荐
 
 建议关注仓库动态，积极去合并，不要长时间积累，否则将会导致合并冲突过多，增加合并难度。
@@ -31,23 +28,20 @@ git clone https://github.com/abp-vnext-pro/abp-vnext-pro-vben5.git
 git remote add up gitUrl;
 ```
 
-3. 提交代码到自己公司 git
+3. 新建分支
+```bash
+git checkout -b vben5
+```
+
+4. 提交代码到自己公司 git
 
 ```bash
 # 提交代码到自己公司
 # main为分支名 需要自行根据情况修改
-git push up main
-
-# 同步公司的代码
-# main为分支名 需要自行根据情况修改
-git pull up main
+git push up vben5
 ```
 
-4. 如何同步开源最新代码
-
-```bash
-git pull origin main
-```
+5. 这个时候你可以看到你的代码已经提交到自己公司的 git 仓库了，你需要发起合并请求vben5分支到你项目分支。
 
 ::: tip 提示
 
