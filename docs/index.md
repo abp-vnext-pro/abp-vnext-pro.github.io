@@ -31,11 +31,11 @@ features:
     details: 了解各种库的实现原理<br />学习其中的小技巧和冷知识
     link: https://abp.io/docs/latest/
     linkText: Abp官方文档
-  # - icon: 💡
-  #   title: Workflow
-  #   details: 在工作中学到的一切<small>（常用库/工具/奇淫技巧等）</small><br />配合 CV 大法来更好的摸鱼
-  #   link: https://notes.fe-mm.com/workflow/utils/library
-  #   linkText: 常用工具库
+  - icon: 💡
+    title: 多UI组件库支持
+    details: Ant Design Vue<br />Element Plus<br />Naive UI<br />
+    link: https://doc.vben.pro/
+    linkText: UI组件库
   - icon: 🧰
     title: 提效工具
     details: 工欲善其事，必先利其器<br />代码生成器Abp VNext Pro Suite

@@ -7,7 +7,8 @@ export const nav: DefaultTheme.Config['nav'] = [
   { text: '演示', items: [
     { text: '💻演示Vben5(antd)', link: 'http://182.43.18.151:44320/' },
     { text: '💻演示Vben5(ele)', link: 'http://182.43.18.151:44321/' },
-    { text: '💻演示Vben28', link: 'http://182.43.18.151:44318/' },
+    { text: '💻演示Vben5(naive)', link: 'http://182.43.18.151:44322/' },
+    { text: '💻演示Vben2.8', link: 'http://182.43.18.151:44318/' },
   ]},
   { text: '⭐购买Vben5', link: '/about/buy' },
   { text: '✨赞助', link: '/about/donate' },
