@@ -17,12 +17,12 @@
 ## 如何集成
 - 在对应的层添加对应的引用
 - 添加 DependsOn(typeof(DataDictionaryManagementXxxModule)) 特性到对应模块
-    - Lion.Abp.BasicManagement.Application
-    - Lion.Abp.BasicManagement.Application.Contracts
-    - Lion.Abp.BasicManagement.Domain
-    - Lion.Abp.BasicManagement.Domain.Shared
-    - Lion.Abp.BasicManagement.EntityFrameworkCore
-    - Lion.Abp.BasicManagement.HttpApi
-    - Lion.Abp.BasicManagement.HttpApi.Client
+    - Lion.AbpPro.BasicManagement.Application
+    - Lion.AbpPro.BasicManagement.Application.Contracts
+    - Lion.AbpPro.BasicManagement.Domain
+    - Lion.AbpPro.BasicManagement.Domain.Shared
+    - Lion.AbpPro.BasicManagement.EntityFrameworkCore
+    - Lion.AbpPro.BasicManagement.HttpApi
+    - Lion.AbpPro.BasicManagement.HttpApi.Client
 - 在自己的dbcontext中实现接口：IBasicManagementDbContext
 - 在 EntityFrameworkCore 层添加数据库配置在 AbpProDbContext.cs 的 OnModelCreating()方法中添加 builder.ConfigureBasicManagement();

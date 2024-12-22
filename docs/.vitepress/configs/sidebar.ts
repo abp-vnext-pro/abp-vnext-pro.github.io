@@ -94,11 +94,15 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
         },
         {
           link: 'modules/notification',
-          text: '站内信模块',
+          text: '消息模块',
         },
         {
           link: 'modules/language',
           text: '语言模块',
+        },
+        {
+          link: 'modules/code',
+          text: '代码生成器模块',
         },
       ],
     },

@@ -8,13 +8,13 @@ outline: deep
 ## 如何集成
 - 在对应的层添加对应的引用
 - 添加 DependsOn(typeof(NotificationManagementXxxModule)) 特性到对应模块
-    - Lion.Abp.NotificationManagement.Application
-    - Lion.Abp.NotificationManagement.Application.Contracts
-    - Lion.Abp.NotificationManagement.Domain
-    - Lion.Abp.NotificationManagement.Domain.Shared
-    - Lion.Abp.NotificationManagement.EntityFrameworkCore
-    - Lion.Abp.NotificationManagement.HttpApi
-    - Lion.Abp.NotificationManagement.HttpApi.Client
+    - Lion.AbpPro.NotificationManagement.Application
+    - Lion.AbpPro.NotificationManagement.Application.Contracts
+    - Lion.AbpPro.NotificationManagement.Domain
+    - Lion.AbpPro.NotificationManagement.Domain.Shared
+    - Lion.AbpPro.NotificationManagement.EntityFrameworkCore
+    - Lion.AbpPro.NotificationManagement.HttpApi
+    - Lion.AbpPro.NotificationManagement.HttpApi.Client
 - 在自己的dbcontext中实现接口：INotificationManagementDbContext
 - 在 EntityFrameworkCore 层添加数据库配置在 AbpProDbContext.cs 的 OnModelCreating()方法中添加 builder.ConfigureNotificationManagement();
 
@@ -57,7 +57,7 @@ public static class NotificationManagementDbProperties
 ### 后端发布通告
 - 注入INotificationAppService既可以发送公告
 ```csharp
-namespace Lion.AbpPro.NotificationManagement.Notifications
+namespace Lion.AbpProPro.NotificationManagement.Notifications
 {
     public interface INotificationAppService : IApplicationService
     {

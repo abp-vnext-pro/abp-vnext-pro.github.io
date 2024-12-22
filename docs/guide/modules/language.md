@@ -13,13 +13,13 @@
 ## 如何集成
 - 在对应的层添加对应的引用
 - 添加 DependsOn(typeof(LanguageManagementXxxModule)) 特性到对应模块
-    - Lion.Abp.LanguageManagement.Application
-    - Lion.Abp.LanguageManagement.Application.Contracts
-    - Lion.Abp.LanguageManagement.Domain
-    - Lion.Abp.LanguageManagement.Domain.Shared
-    - Lion.Abp.LanguageManagement.EntityFrameworkCore
-    - Lion.Abp.LanguageManagement.HttpApi
-    - Lion.Abp.LanguageManagement.HttpApi.Client
+    - Lion.AbpPro.LanguageManagement.Application
+    - Lion.AbpPro.LanguageManagement.Application.Contracts
+    - Lion.AbpPro.LanguageManagement.Domain
+    - Lion.AbpPro.LanguageManagement.Domain.Shared
+    - Lion.AbpPro.LanguageManagement.EntityFrameworkCore
+    - Lion.AbpPro.LanguageManagement.HttpApi
+    - Lion.AbpPro.LanguageManagement.HttpApi.Client
 - 在自己的dbcontext中实现接口：ILanguageManagementDbContext
 - 在 EntityFrameworkCore 层添加数据库配置在 AbpProDbContext.cs 的 OnModelCreating()方法中添加 builder.ConfigureLanguageManagement();
 

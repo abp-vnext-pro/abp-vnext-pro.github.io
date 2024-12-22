@@ -13,13 +13,13 @@
 ## 如何集成
 - 在对应的层添加对应的引用
 - 添加 DependsOn(typeof(DataDictionaryManagementXxxModule)) 特性到对应模块
-    - Lion.Abp.DataDictionaryManagement.Application
-    - Lion.Abp.DataDictionaryManagement.Application.Contracts
-    - Lion.Abp.DataDictionaryManagement.Domain
-    - Lion.Abp.DataDictionaryManagement.Domain.Shared
-    - Lion.Abp.DataDictionaryManagement.EntityFrameworkCore
-    - Lion.Abp.DataDictionaryManagement.HttpApi
-    - Lion.Abp.DataDictionaryManagement.HttpApi.Client
+    - Lion.AbpPro.DataDictionaryManagement.Application
+    - Lion.AbpPro.DataDictionaryManagement.Application.Contracts
+    - Lion.AbpPro.DataDictionaryManagement.Domain
+    - Lion.AbpPro.DataDictionaryManagement.Domain.Shared
+    - Lion.AbpPro.DataDictionaryManagement.EntityFrameworkCore
+    - Lion.AbpPro.DataDictionaryManagement.HttpApi
+    - Lion.AbpPro.DataDictionaryManagement.HttpApi.Client
 - 在自己的dbcontext中实现接口：IDataDictionaryManagementDbContext
 - 在 EntityFrameworkCore 层添加数据库配置在 AbpProDbContext.cs 的 OnModelCreating()方法中添加 builder.ConfigureDataDictionaryManagement();
 
