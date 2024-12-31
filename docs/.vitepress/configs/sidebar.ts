@@ -78,6 +78,10 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
           link: 'basic/switchdatatabse',
           text: '切换数据库',
         },
+        {
+          link: 'basic/entity-extensions',
+          text: '扩展字段',
+        },
       ],
     },
     {
