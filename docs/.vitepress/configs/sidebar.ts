@@ -86,6 +86,10 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
           link: 'basic/job',
           text: '后台任务',
         },
+        {
+          link: 'basic/autoapi',
+          text: '自动API控制器',
+        },
       ],
     },
     {
