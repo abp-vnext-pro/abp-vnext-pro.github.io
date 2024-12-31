@@ -90,6 +90,10 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
           link: 'basic/autoapi',
           text: '自动API控制器',
         },
+        {
+          link: 'basic/csharpclientproxy',
+          text: 'C#API代理',
+        },
       ],
     },
     {
