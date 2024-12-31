@@ -82,6 +82,10 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
           link: 'basic/entity-extensions',
           text: '扩展字段',
         },
+        {
+          link: 'basic/job',
+          text: '后台任务',
+        },
       ],
     },
     {
