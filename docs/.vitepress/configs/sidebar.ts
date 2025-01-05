@@ -171,6 +171,13 @@ function sidebarVben5(): DefaultTheme.SidebarItem[] {
     },
     {
       collapsed: false,
+      text: '部署',
+      items: [
+        { link: 'deploy', text: '部署' },
+      ],
+    },
+    {
+      collapsed: false,
       text: '其它',
       items: [{ link: 'update', text: '更新' }],
     },
