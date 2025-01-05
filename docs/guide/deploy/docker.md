@@ -14,7 +14,7 @@ outline: deep
 
 ### Dockerfile
 
-```yaml
+```bash
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
 WORKDIR /app
 EXPOSE 80
@@ -56,7 +56,7 @@ docker run -itd --name Lion.AbpPro.HttpApi.Host -p 8011:80 Lion.AbpPro.HttpApi.H
 
 ### Dockerfile
 
-```yml
+```bash
 FROM node:16-alpine as build-stage
 WORKDIR /app
 COPY . ./
@@ -95,7 +95,7 @@ docker run -itd --name Lion.AbpPro.Vue2.8 -p 8012:80 Lion.AbpPro.Vue2.8
 
 ### Dockerfile
 
-```yml
+```bash
 FROM node:20-slim AS builder
 ENV PNPM_HOME="/pnpm"
 ENV PATH="$PNPM_HOME:$PATH"
