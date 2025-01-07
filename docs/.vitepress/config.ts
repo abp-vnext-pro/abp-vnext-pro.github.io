@@ -7,6 +7,7 @@ import { head, nav, sidebar } from './configs'
 const APP_BASE_PATH = basename(process.env.GITHUB_REPOSITORY || '')
 
 export default defineConfig({
+  ignoreDeadLinks: true,
   outDir: '../dist',
   //base: 'https://abp-vnext-pro.github.io/',
 
