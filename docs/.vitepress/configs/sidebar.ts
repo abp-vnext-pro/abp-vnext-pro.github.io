@@ -146,6 +146,10 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
           link: 'basic/elastic',
           text: 'Elastic',
         },
+        {
+          link: 'basic/web-apiclient-core',
+          text: 'WebApiClient',
+        },
       ],
     },
     {
