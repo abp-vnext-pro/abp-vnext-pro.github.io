@@ -94,6 +94,10 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
           link: 'basic/csharpclientproxy',
           text: 'C#API代理',
         },
+        {
+          link: 'basic/twofactor',
+          text: '双因素验证',
+        },
       ],
     },
     {
