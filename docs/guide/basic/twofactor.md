@@ -70,5 +70,8 @@ public interface IAccountAppService: IApplicationService
 
 ## 说明
 - 启用双因素验证，在abpuser表的TwoFactorEnabled字段会设置为true
-- 当前账户的双因素密钥保存在扩展字段中：{"TwoFactorySecret":"REPEYQKXUUFKS62GQHGAWRMBCKV7KU6G"}
+- 当前账户的双因素密钥保存在扩展字段中
+```json
+{"TwoFactorySecret":"REPEYQKXUUFKS62GQHGAWRMBCKV7KU6G"}
+```
 

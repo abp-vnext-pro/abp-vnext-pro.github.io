@@ -96,7 +96,11 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
         },
         {
           link: 'basic/twofactor',
-          text: '双因素验证',
+          text: '双因素验证⭐',
+        },
+        {
+          link: 'basic/thridpartylogin',
+          text: '第三方登录⭐',
         },
       ],
     },
@@ -122,7 +126,7 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
         },
         {
           link: 'modules/code',
-          text: '代码生成器模块',
+          text: '代码生成器模块⭐',
         },
       ],
     },
