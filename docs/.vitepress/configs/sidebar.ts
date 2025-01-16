@@ -186,6 +186,7 @@ function sidebarVben5(): DefaultTheme.SidebarItem[] {
       text: '部署',
       items: [
         { link: 'deploy', text: '部署' },
+        { link: 'iis', text: 'IIS部署' },
       ],
     },
     {
