@@ -104,14 +104,6 @@ location / {
 }
 ```
 
-部署时可能会发现资源路径不对，只需要修改`.env.production`文件即可。
-
-```bash
-# 根据自己路径来配置更改
-# 注意需要以 / 开头和结尾
-VITE_BASE=/
-VITE_BASE=/xxx/
-```
 
 ### 前端路由与服务端的结合
 
@@ -144,28 +136,6 @@ server {
 }
 ```
 
-#### 部署到非根目录
-
-- 首先需要在打包的时候更改`.env.production`配置:
-
-```bash
-VITE_BASE = /sub/
-```
-
-- 然后在 nginx 配置文件中配置
-
-```bash {8}
-server {
-    listen       80;
-    server_name  localhost;
-    location /sub/ {
-      # 这里是vue打包文件dist内的文件的存放路径
-      alias   /srv/www/project/;
-      index index.html index.htm;
-      try_files $uri $uri/ /sub/index.html;
-    }
-}
-```
 
 ## 跨域处理
 

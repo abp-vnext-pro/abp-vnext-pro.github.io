@@ -165,7 +165,11 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
       text: '部署',
       items: [{ link: 'deploy/docker', text: 'Docker部署' }],
     },
-  
+    {
+      collapsed: false,
+      text: '更新',
+      items: [{ link: 'update/8.x-9.0.3', text: '8.x-9.0.3升级指南' }],
+    },
   ]
 }
 function sidebarVben5(): DefaultTheme.SidebarItem[] {
@@ -178,6 +182,7 @@ function sidebarVben5(): DefaultTheme.SidebarItem[] {
         { link: 'thin', text: '精简版本' },
         { link: 'route', text: '菜单和路由' },
         { link: 'faq', text: '常见问题' },
+        { link: 'pub', text: '发布订阅' },
         { link: 'check-updates', text: '检查更新' },
       ],
     },
