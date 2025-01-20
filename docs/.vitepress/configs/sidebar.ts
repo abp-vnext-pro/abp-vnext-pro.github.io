@@ -102,6 +102,10 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
           link: 'basic/thridpartylogin',
           text: '第三方登录⭐',
         },
+        {
+          link: 'basic/tenant',
+          text: '多租户⭐',
+        },
       ],
     },
     {
