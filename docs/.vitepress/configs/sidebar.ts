@@ -67,6 +67,10 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
           text: 'EF数据过滤',
         },
         {
+          link: 'basic/dapper',
+          text: 'Dapper',
+        },
+        {
           link: 'basic/dataseeding',
           text: '种子数据',
         },
