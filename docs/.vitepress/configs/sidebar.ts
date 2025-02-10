@@ -205,7 +205,7 @@ function sidebarVben5(): DefaultTheme.SidebarItem[] {
     {
       collapsed: false,
       text: '其它',
-      items: [{ link: 'update', text: '更新' }],
+      items: [{ link: 'update', text: '更新' },{ link: 'github-token', text: 'github-token' }],
     },
   ]
 }
