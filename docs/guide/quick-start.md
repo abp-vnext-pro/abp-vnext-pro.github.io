@@ -29,9 +29,20 @@ dotnet tool update Lion.AbpPro.Cli -g
 ### 创建项目
 
 ```bash
-lion.abp new -t pro -c 公司名称 -p 项目名称  -o 输出路径(可选)
-lion.abp new -t pro.all -c 公司名称 -p 项目名称  -o 输出路径(可选)
-lion.abp new -t pro.module -c 公司名称 -p 项目名称  -m 模块名称  -o 输出路径(可选)
+lion.abp new -t pro -c 公司名称 -p 项目名称 -v 版本(默认LastRelease)
+```
+
+- nuget版本
+
+```bash
+lion.abp new -t pro-nuget -c 公司名称 -p 项目名称 -v 版本(默认LastRelease)
+```
+
+
+- 模块
+
+```bash
+lion.abp new -t pro-module -c 公司名称 -p 项目名称 -m 模块名称 -v 版本(默认LastRelease) 
 ```
 
 

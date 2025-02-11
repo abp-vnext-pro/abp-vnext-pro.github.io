@@ -29,6 +29,10 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
       text: '基础',
       items: [
         {
+          link: 'basic/cli',
+          text: 'Cli',
+        },
+        {
           link: 'basic/login',
           text: '登录',
         },
@@ -166,6 +170,10 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
           link: 'basic/web-apiclient-core',
           text: 'WebApiClient',
         },
+        { 
+          link: 'basic/github-token', 
+          text: 'github-token' 
+        }
       ],
     },
     {
@@ -205,7 +213,7 @@ function sidebarVben5(): DefaultTheme.SidebarItem[] {
     {
       collapsed: false,
       text: '其它',
-      items: [{ link: 'update', text: '更新' },{ link: 'github-token', text: 'github-token' }],
+      items: [{ link: 'update', text: '更新' },],
     },
   ]
 }
