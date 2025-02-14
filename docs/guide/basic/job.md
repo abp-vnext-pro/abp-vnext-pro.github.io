@@ -44,7 +44,16 @@ private void ConfigureHangfire(ServiceConfigurationContext context)
 4. 配置Dashboard
 - 在OnApplicationInitialization中添加一下代码
 ```csharp
-app.UseAbpHangfireDashboard();
+app.UseConfiguredEndpoints(endpoints =>
+       {
+           endpoints.MapHealthChecks("/health"); 
+           
+           endpoints.MapHangfireDashboard("/hangfire", new DashboardOptions()
+           {
+               Authorization = new[] { new CustomHangfireAuthorizeFilter() },
+               IgnoreAntiforgeryToken = true
+           });
+       });
 ```
 
 ## 一次性Job
