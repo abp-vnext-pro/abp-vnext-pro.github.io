@@ -33,6 +33,10 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
           text: 'Cli',
         },
         {
+          link: 'basic/code',
+          text: '代码自动生成',
+        },
+        {
           link: 'basic/login',
           text: '登录',
         },
