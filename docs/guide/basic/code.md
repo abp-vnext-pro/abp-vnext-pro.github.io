@@ -20,9 +20,9 @@ dotnet tool update Lion.AbpPro.Cli -g
 ![](https://lion-foods.oss-cn-beijing.aliyuncs.com/vben5/code-2png.png)
 
 2. 创建好实体之后，执行cli
-- 这个cli在你的项目的src路径下执行,它会默认找到这个位置,你也可以通过-o 参数指定你的代码位置,代码位置为src的绝对路径
+- 这个cli在你的项目的src路径下执行,它会默认找到这个位置,你也可以通过 -s 参数指定你的代码位置,代码位置为src的绝对路径
 ```bash
-lion.abp code  -p 项目id -t 模板id
+lion.abp code  -p 项目id -t 模板id -s 参数指定的项目src地址(可选)
 ```
 
 3. 执行完成后，检查代码是否正确。然后执行dotnet ef迁移命令生成数据库即可。
