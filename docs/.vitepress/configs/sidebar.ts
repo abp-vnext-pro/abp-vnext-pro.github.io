@@ -141,6 +141,10 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
           text: '语言模块',
         },
         {
+          link: 'modules/file',
+          text: '文件模块',
+        },
+        {
           link: 'modules/code',
           text: '代码生成器模块⭐',
         },
