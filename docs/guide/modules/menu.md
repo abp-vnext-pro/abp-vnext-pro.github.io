@@ -21,6 +21,7 @@ export const overridesPreferences = defineOverridesPreferences({
   }
 });
 
+- 如果切换了动态菜单,需要清理浏览器缓存。
 ```
 ## 后端集成
 1. 在对应的层添加对应的引用
