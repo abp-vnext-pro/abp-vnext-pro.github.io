@@ -148,6 +148,10 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
           link: 'modules/code',
           text: '代码生成器模块⭐',
         },
+        {
+          link: 'modules/menu',
+          text: '动态菜单模块⭐',
+        },
       ],
     },
     {

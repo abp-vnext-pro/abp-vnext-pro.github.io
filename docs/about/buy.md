@@ -4,7 +4,8 @@ outline: deep
 
 ## 购买
 * Vben5 前端源码需要付费购买获取
-* 价格：原价<span style="color:green;font-size:14px;">899</span>元(现在年终优惠<span style="color:red;font-size:28px;">399</span>即可获取)
+* 价格：原价<span style="color:green;font-size:14px;">899</span>元(现<span style="color:red;font-size:28px;">599</span>即可获取)
+* **包含前端vben5,以及后端所有模块,一次付费,终身享用.**
 * 支付成功后，请联系作者获取下载链接
 * 也可以先加微信，微信号：WJLXRzzZ，备注：Vben5 购买
 
