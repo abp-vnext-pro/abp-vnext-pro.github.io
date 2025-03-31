@@ -118,6 +118,10 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
           link: 'basic/tenant',
           text: '多租户⭐',
         },
+        {
+          link: 'basic/refresh-token',
+          text: '无感刷新⭐',
+        },
       ],
     },
     {
