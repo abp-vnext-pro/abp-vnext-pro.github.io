@@ -189,6 +189,10 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
         { 
           link: 'basic/github-token', 
           text: 'github-token' 
+        },
+        { 
+          link: 'basic/microservice', 
+          text: '微服务' 
         }
       ],
     },
