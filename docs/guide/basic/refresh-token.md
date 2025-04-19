@@ -28,5 +28,5 @@
 ```
 
 ## 效果
-![](https://lion-foods.oss-cn-beijing.aliyuncs.com/vben5/refreshtoken.png)
+![](https://lion-foods.oss-cn-beijing.aliyuncs.com/vben5/refresh-token.gif)
 

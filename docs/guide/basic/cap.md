@@ -91,3 +91,9 @@ namespace AbpDemo
     }
 }
 ```
+
+## 发布延迟事件
+![](https://lion-foods.oss-cn-beijing.aliyuncs.com/vben5/cap-delay.png)
+
+## 订阅延迟事件
+![](https://lion-foods.oss-cn-beijing.aliyuncs.com/vben5/cap-delay-1.png)

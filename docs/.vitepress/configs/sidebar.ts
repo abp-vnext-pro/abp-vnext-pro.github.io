@@ -122,6 +122,10 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
           link: 'basic/refresh-token',
           text: '无感刷新⭐',
         },
+        {
+          link: 'basic/password-auth',
+          text: '密码安全⭐',
+        },
       ],
     },
     {
