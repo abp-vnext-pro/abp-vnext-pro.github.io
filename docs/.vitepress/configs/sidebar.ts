@@ -197,6 +197,10 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
         { 
           link: 'basic/microservice', 
           text: '微服务' 
+        },
+        { 
+          link: 'basic/preheat', 
+          text: 'Starter模块' 
         }
       ],
     },
