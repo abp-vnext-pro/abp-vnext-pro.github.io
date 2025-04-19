@@ -69,3 +69,39 @@ outline: deep
 - gzip_static: 这个模块需要 nginx 另外安装，默认的 nginx 没有安装这个模块。
 
 - 开启 `brotli` 也需要 nginx 另外安装模块
+
+## 内网部署，图标加载不出来
+- 以antd版本为例
+- 在apps/web-antd/src/bootstrap.ts 下添加一下代码：
+```ts
+// 加载本地图标
+import '#/hooks/useLoadIcon';
+```
+- useLoadIcon里面包含了很多图标，会导致首次加载变慢，你可以只需要加载对应的，比如你只使用了antd的图标，就只用antd的。
+
+```ts
+import { addCollection } from '@vben/icons';
+
+import AntDesignIcons from '@iconify/json/json/ant-design.json'; // 你只使用了antd的图标，就只用antd的。其它的都可以注释
+import CarbonIcons from '@iconify/json/json/carbon.json';
+import EpIcons from '@iconify/json/json/ep.json';
+import IcIcons from '@iconify/json/json/ic.json';
+import LogosIcons from '@iconify/json/json/logos.json';
+import LucideIcons from '@iconify/json/json/lucide.json';
+import MdiIcons from '@iconify/json/json/mdi.json';
+import OuiIcons from '@iconify/json/json/oui.json';
+import PhosphorIcons from '@iconify/json/json/ph.json';
+import UnIcons from '@iconify/json/json/uil.json';
+
+addCollection(AntDesignIcons);
+addCollection(LucideIcons);
+addCollection(CarbonIcons);
+addCollection(IcIcons as any);
+addCollection(LogosIcons as any);
+addCollection(PhosphorIcons as any);
+addCollection(UnIcons);
+addCollection(OuiIcons);
+addCollection(MdiIcons);
+addCollection(EpIcons);
+
+```
