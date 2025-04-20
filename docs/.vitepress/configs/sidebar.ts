@@ -41,6 +41,10 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
           text: '登录',
         },
         {
+          link: 'basic/preheat',
+          text: '程序预热',
+        },
+        {
           link: 'basic/authorization',
           text: '权限',
         },
