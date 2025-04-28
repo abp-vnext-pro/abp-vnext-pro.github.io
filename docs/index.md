@@ -13,7 +13,7 @@ hero:
     - text: 快速开始
       link: /guide/quick-start
     - text: 在线预览
-      link: http://182.43.18.151:44320/
+      link: http://antd.chengzhi.online/
       theme: alt
     - text: GitHub
       link: https://github.com/WangJunZzz/abp-vnext-pro
