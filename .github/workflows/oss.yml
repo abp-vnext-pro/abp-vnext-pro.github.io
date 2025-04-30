@@ -50,14 +50,17 @@ jobs:
       # 打包成静态文件
       - name: Build
         run: pnpm install && pnpm build
- 
-      - name: Deploy to OSS
-        uses: aliyuncs/oss-upload-action@v1.0.0
+
+      - name: Deploy OSS
+        uses: taixw2/deploy-aliyun-oss@v1
         with:
-          endpoint: "oss-cn-hangzhou.aliyuncs.com"
+          # aliyun config
+          region: oss-cn-hangzhou.aliyuncs.com
           access-key-id: ${{ secrets.OSS_ACCESS_KEY_ID }}
           access-key-secret: ${{ secrets.OSS_ACCESS_KEY_SECRET }}
-          bucket-name: ${{ secrets.OSS_BUCKET_NAME }}
-          #path: ${{ secrets.OSS_PATH }}
-          local-path: ./docs/.vitepress/dist  # VitePress 构建输出目录
-          delete-removed: true  # 删除 OSS 中已不存在的文件
+          bucket: ${{ secrets.OSS_BUCKET_NAME }}
+          secure: true
+          # deploy config
+          # entry: dist/**/*  glob pattern
+          remote-dir: /
+          path-rewrite: ^dist/
