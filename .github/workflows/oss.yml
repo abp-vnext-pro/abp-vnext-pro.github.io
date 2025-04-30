@@ -52,15 +52,11 @@ jobs:
         run: pnpm install && pnpm build
 
       - name: Deploy OSS
-        uses: taixw2/deploy-aliyun-oss@v1
+        uses: Menci/upload-to-oss@beta-v1
         with:
           # aliyun config
-          region: oss-cn-hangzhou.aliyuncs.com
+          endpoint: oss-cn-hangzhou.aliyuncs.com
           access-key-id: ${{ secrets.OSS_ACCESS_KEY_ID }}
           access-key-secret: ${{ secrets.OSS_ACCESS_KEY_SECRET }}
           bucket: ${{ secrets.OSS_BUCKET_NAME }}
-          secure: true
-          # deploy config
-          # entry: dist/**/*  glob pattern
-          remote-dir: /
-          path-rewrite: ^dist/
+          local-path: dist
