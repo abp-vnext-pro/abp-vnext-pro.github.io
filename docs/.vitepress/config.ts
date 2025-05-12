@@ -70,12 +70,12 @@ export default defineConfig({
     //   //badgeId: 'maomao1996.vitepress-nav-template',
     // },
 
-    comment: {
-      repo: 'abp-vnext-pro/abp-vnext-pro.github.io',
-      repoId: 'R_kgDONQ4OeA',
-      category: 'Announcements',
-      categoryId: 'DIC_kwDONQ4OeM4CkXJW',
-    },
+    // comment: {
+    //   repo: 'abp-vnext-pro/abp-vnext-pro.github.io',
+    //   repoId: 'R_kgDONQ4OeA',
+    //   category: 'Announcements',
+    //   categoryId: 'DIC_kwDONQ4OeM4CkXJW',
+    // },
   },
 
   vite: {
