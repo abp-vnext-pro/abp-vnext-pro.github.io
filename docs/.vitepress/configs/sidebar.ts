@@ -164,6 +164,10 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
           link: 'modules/menu',
           text: '动态菜单模块⭐',
         },
+                {
+          link: 'modules/import',
+          text: '导入模块⭐',
+        },
       ],
     },
     {

@@ -9,8 +9,6 @@
 
 ## 如何集成
 ### 后端
-- 在example分支有集成示例：
-    [Github-example仓库地址](https://github.com/WangJunZzz/abp-vnext-pro/tree/example)
 1. 在对应的层添加对应的引用
 2. 添加 DependsOn(typeof(CodeManagementXxxModule)) 特性到对应模块
     - Lion.AbpPro.CodeManagement.Application
@@ -24,18 +22,6 @@
 4. 在 EntityFrameworkCore 层添加数据库配置在 AbpProDbContext.cs 的 OnModelCreating()方法中添加 builder.ConfigureCodeManagement();
 5. 执行ef迁移
 
-###  前端
-- 在example分支有集成示例：
-[Github-example仓库地址](https://github.com/abp-vnext-pro/abp-vnext-pro-vben5/tree/example)
-
-1. 新建vben5项目之后，查看以上example仓库地址代码
-2. 目前只支持antd的前端
-3. 把example分支下的apps/web-antd/src/locales/zh-CN/code.json 拷贝到您的项目同级目录下
-4. 把example分支下的apps/web-antd/src/locales/en-US/code.json 拷贝到您的项目同级目录下
-5. 把example分支下的apps/web-antd/src/router/routes/modules/code.ts 拷贝到您的项目同级目录下
-6. 把example分支下的apps/web-antd/src/views/textTemplate 拷贝到您的项目同级目录下
-7. 启动后端,执行npm run nswag 刷新接口代理(记得把刷代理的接口json改成你本地启动的项目地址)
-8. 启动前端npm run dev 就可以看到代码生成器的ui界面
 
 ## 如何配置单独数据库
 - 数据库连接名称：CodeManagement
