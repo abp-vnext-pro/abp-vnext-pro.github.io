@@ -11,7 +11,7 @@ group:
 
 ::: info 环境要求
 在启动项目前，你需要确保你的环境满足以下要求：
-- [dotnet core 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
+- [dotnet core 9.0](https://dotnet.microsoft.com/en-us/download/dotnet/9.0)
 - [nodejs 20.15.0+](https://nodejs.org/zh-cn/)
 - [pnpm](https://www.pnpm.cn/installation)
 - [mysql](https://dev.mysql.com/downloads/installer/)
@@ -20,7 +20,7 @@ group:
 
 :::
 
-## 后端
+## CLI
 ### 安装 CLI 工具
 ```bash
 dotnet tool install Lion.AbpPro.Cli -g
@@ -29,7 +29,7 @@ dotnet tool install Lion.AbpPro.Cli -g
 ```bash
 dotnet tool update Lion.AbpPro.Cli -g
 ```
-### 创建项目
+### 创建Vben2项目
 
 ```bash
 lion.abp new -t pro -c 公司名称 -p 项目名称 -v 版本(默认LastRelease)
@@ -49,8 +49,29 @@ lion.abp new -t pro-module -c 公司名称 -p 项目名称 -m 模块名称 -v �
 ```
 
 
+## 创建Vben5项目
+
+### 登录
+```bash
+lion.abp login -token 你的token
+```
+
+### 创建项目
+```bash
+# 源码版本
+lion.abp create -t pro -c 公司名称 -p 项目名称  -o 输出路径 -v 版本(默认LastRelease)
+
+# nuget版本，没有网关
+lion.abp create -t pro-nuget -c 公司名称 -p 项目名称 -o 输出路径 -v 版本(默认LastRelease)
+
+# nuget版本，有网关
+lion.abp create -t pro-nuget-gateways -c 公司名称 -p 项目名称 -o 输出路径 -v 版本(默认LastRelease)
+```
+
 ::: danger 注意
 VS 编译项目字符串超过 256 个字符,把项目拷贝到磁盘根目录 OR 使用 Rider 开发
+- 在windows上创建源码版本的项目会存在:生成模板失败Access to the path xx is denied.
+    - 解决方式: 指定-o 参数， 也就是你的想要要生成的路径地址
 :::
 
 ### 修改配置
@@ -63,10 +84,9 @@ VS 编译项目字符串超过 256 个字符,把项目拷贝到磁盘根目录 O
     "Default": "Data Source=localhost;Port=3306;Database=LionAbpProDB;uid=root;pwd=1q2w3E*;charset=utf8mb4;Allow User Variables=true;AllowLoadLocalInfile=true"
   },
   "Redis": {
-    "Configuration": "localhost:6379,password=1q2w3E*,defaultdatabase=5"
+    "Configuration": "localhost:6379,password=1q2w3E*,defaultdatabase=1"
   }，
   "Cap": {
-    "Enabled": true,
     "RabbitMq": {
       "HostName": "localhost",
       "UserName": "admin",
@@ -143,12 +163,6 @@ pnpm run dev
 - 微信号：WJLXRzzZ
 :::
 
-### 获取源码项目
-
-```bash
-# 此地址需要找作者购买源码
-git clone https://github.com/abp-vnext-pro/abp-vnext-pro-vben5.git
-```
 
 执行以下命令运行项目:
 

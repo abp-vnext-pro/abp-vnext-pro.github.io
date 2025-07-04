@@ -47,3 +47,7 @@ public class PersonDapperRepository : DapperRepository<MyAppDbContext>, ITransie
 
 ```
 5. 在使用的地方注入IPersonDapperRepository接口即可使用。
+
+::: tip 注意
+- Dapper的事务和EFCore的事务是保持一致的。
+:::   

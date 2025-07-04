@@ -1,7 +1,7 @@
 ---
 group:
   icon: meteor-icons:sparkles 
-  text: 付费功能
+  text: Vben5功能
   sort: 3
 ---
 

@@ -1,6 +1,6 @@
 ---
 sidebar:
-  sort:11
+  sort: 7
 ---
 
 # 分布式锁
@@ -22,8 +22,7 @@ namespace AbpDemo
         
             context.Services.AddSingleton<IDistributedLockProvider>(sp =>
             {
-                var connection = ConnectionMultiplexer
-                    .Connect(configuration["Redis:Configuration"]);
+                var connection = ConnectionMultiplexer.Connect(configuration["Redis:Configuration"]);
                 return new RedisDistributedSynchronizationProvider(connection.GetDatabase());
             });
         }

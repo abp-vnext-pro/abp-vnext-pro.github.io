@@ -1,5 +1,6 @@
 ---
-outline: deep
+sidebar:
+  sort: 6
 ---
 
 # 分布式事件

@@ -1,7 +1,7 @@
 ---
 group:
   icon: meteor-icons:grid 
-  text: 开源模块
+  text: 模块
   sort: 4
 ---
 

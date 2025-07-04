@@ -1,5 +1,5 @@
 ---
-group:
+sidebar:
   sort: 2
 ---
 
@@ -69,6 +69,8 @@ export default defineConfig({
 ```
 - 如果新建接口或者参数或者返回值有改变，需要重新生成代理，执行:
 ```bash
+# 根据我们选中的框架，进入到对应的apps下面，如果选中的是antd版本
+cd apps/web-antd
 npm run nswag
 ```
 #### 调用接口
@@ -82,6 +84,10 @@ const { data = {} } = await postApiAppAccountLogin({
      },
    });
 ```
+::: danger 注意
+后端如果有新增接口,前端想要调用,一定要执行npm run nswag命令,前端才能看到这个新增接口。
+:::
+
 ::: info over
 - 这样我们就通过前端代码生成api的方式，调用后端接口了。
 :::

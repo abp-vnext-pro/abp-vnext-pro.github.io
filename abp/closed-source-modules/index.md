@@ -1,8 +1,8 @@
 ---
 group:
   icon: meteor-icons:sparkles
-  text: 付费模块
-  sort: 6
+  text: Vben5模块
+  sort: 5
 ---
 
 # 动态菜单模块

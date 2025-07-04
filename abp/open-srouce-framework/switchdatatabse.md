@@ -1,5 +1,6 @@
 ---
-outline: deep
+sidebar:
+  sort: 8
 ---
 
 ::: tip 注意
@@ -17,7 +18,7 @@ outline: deep
 1. 在Directory.Build.Volo.targets添加Volo.Abp.EntityFrameworkCore.SqlServer NuGet包
 ```xml
 <ItemGroup>
-    <PackageReference Update="Volo.Abp.EntityFrameworkCore.SqlServer" Version="8.3.3"/>
+    <PackageReference Update="Volo.Abp.EntityFrameworkCore.SqlServer" Version="9.2.1"/>
 </ItemGroup>
 ```
 

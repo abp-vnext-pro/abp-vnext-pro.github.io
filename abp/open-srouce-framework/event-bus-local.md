@@ -1,6 +1,6 @@
 ---
 sidebar:
-  sort: 123
+  sort: 5
 ---
 
 ## 本地事件

@@ -1,5 +1,5 @@
 ---
-group:
+sidebar:
   sort: 3
 ---
 

@@ -1,7 +1,8 @@
 ---
 sidebar:
-  sort:14
+  sort: 9
 ---
+
 # 后台任务
 - 当前文章讲述如何在abp中使用hangfire(redis持久化)作为后台任务
 

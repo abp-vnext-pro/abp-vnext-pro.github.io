@@ -25,6 +25,7 @@ sidebar:
 Configure<AbpDistributedCacheOptions>(options =>
 {
     options.KeyPrefix = "MyApp1";
+    // todo 也可以全局配置每个缓存key的有效期
 });
 ```
 

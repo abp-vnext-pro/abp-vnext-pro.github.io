@@ -1,6 +1,6 @@
 ---
 sidebar:
-  sort:12
+  sort: 10
 ---
 
 # 扩展属性

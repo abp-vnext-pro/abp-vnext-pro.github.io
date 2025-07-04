@@ -27,3 +27,8 @@ public static class MultiTenancyConsts
 
 - 关闭多租户
     - 上面所看到的租户相关的全部会隐藏
+
+::: tip 注意
+- Abp会自动解析出租户，后续所有的接口请求，请求头都带上租户Id(__tenant)，Abp会根据租户Id，自动过滤数据。
+- 如果使用独立数据库，会自动切换到对应的数据库。
+:::    
