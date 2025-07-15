@@ -32,7 +32,7 @@ export default defineConfigWithTheme<ThemeConfig>({
           { text: "💻演示Vben5(antd)", link: "http://antd.chengzhi.online/" },
           { text: "💻演示Vben5(ele)", link: "http://ele.chengzhi.online/" },
           { text: "💻演示Vben5(naive)", link: "http://naive.chengzhi.online/" },
-          { text: "💻演示Vben2.8", link: "http://182.43.18.151:44318/" },
+          { text: "💻演示Vben2.8", link: "http://vben28.chengzhi.online/" },
         ],
       },
       { text: "⭐购买Vben5", link: "/about/buy" },
