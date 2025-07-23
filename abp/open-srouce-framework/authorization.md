@@ -7,7 +7,7 @@ sidebar:
 ## 后端
 ### 定义权限
 - 在Application.Contracts层的Permissions文件夹下定义权限
-- 创建一个继承自 `BookStorePermissionDefinitionProvider` 的类,如下所示:
+- 创建一个继承自 `PermissionDefinitionProvider` 的类,如下所示:
 ```csharp
 namespace Acme.BookStore.Permissions
 {
