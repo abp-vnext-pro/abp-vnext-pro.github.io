@@ -18,29 +18,10 @@ sidebar:
 ```csharp
 public override void ConfigureServices(ServiceConfigurationContext context)
 {
-    ConfigureHangfire(context);
+    context.Services.AddAbpProHangfire();
 }
 
-private void ConfigureHangfire(ServiceConfigurationContext context)
-{
-    var redisStorageOptions = new RedisStorageOptions()
-    {
-        Db = context.Services.GetConfiguration().GetValue<int>("Hangfire:Redis:DB")
-    };
-    Configure<AbpBackgroundJobOptions>(options => { options.IsJobExecutionEnabled = true; });
-    context.Services.AddHangfire(config =>
-    {
-        config.UseRedisStorage(
-            context.Services.GetConfiguration().GetValue<string>("Hangfire:Redis:Host"), redisStorageOptions)
-            // job自动过期时间
-            .WithJobExpirationTimeout(TimeSpan.FromDays(7));
-        //var delaysInSeconds = new[] { 10, 60, 60 * 3 }; // 重试时间间隔
-        //const int Attempts = 3; // 重试次数
-        //config.UseFilter(new AutomaticRetryAttribute() { Attempts = Attempts, DelaysInSeconds = delaysInSeconds });
-        //config.UseFilter(new AutoDeleteAfterSuccessAttribute(TimeSpan.FromDays(7)));
-        //config.UseFilter(new JobRetryLastFilter(Attempts));
-    });
-}
+
 ```
 
 4. 配置Dashboard
@@ -58,6 +39,15 @@ app.UseConfiguredEndpoints(endpoints =>
        });
 ```
 
+```json [appsetting.json]
+  "Hangfire": {
+    "Redis": {
+      "Host": "localhost:6379,password=1q2w3E*",
+      "DB": "2"
+    }
+  }
+``` 
+  
 ## 一次性Job
 - 通过job发送邮件
 1. 定义job参数
