@@ -85,7 +85,7 @@ public interface IMessageManager
          Guid? receiverUserId = null, 
          string receiverUserName = "",
          Guid? tenantId = null, 
-         bool isPersistent = false);
+         bool isPersistent = true);
 }
 ```
 - 调用结果展示

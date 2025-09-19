@@ -6,6 +6,8 @@ sidebar:
 ## SignalR
 1. 基于Volo.Abp.AspNetCore.SignalR封装Lion.AbpPro.SignalR
 2. 可以不依赖通知模块，实现发送消息，但是消息无法持久化，如果需要持久化，请集成通知模块配合使用
+3. 集成：添加Lion.AbpPro.SignalR
+4. 添加AbpProSignalRModule模块依赖
 
 ## 接口
 1. Hub定义
@@ -27,7 +29,8 @@ namespace Lion.AbpPro.SignalR.Hubs
     }
 }
 ```
-4. 在EntityFrameworkCore层实现接口
+4. 在使用得地方注入IMessageManager接口即可使用
+- isPersistent 是否持久化,如果ture会在消息管理中查询到记录，需要集成通知模块
 ```csharp
 public interface IMessageManager
 {
@@ -55,8 +58,7 @@ public interface IMessageManager
          Guid? receiverUserId = null, 
          string receiverUserName = "", 
          Guid? tenantId = null,
-         bool isPersistent = false);
+         bool isPersistent = true);
 }
 
 ```
-5. 在使用的地方注入IMessageManager接口即可使用
