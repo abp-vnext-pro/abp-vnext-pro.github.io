@@ -101,6 +101,7 @@ VS 编译项目字符串超过 256 个字符,把项目拷贝到磁盘根目录 O
     "Default": "Data Source=localhost;Port=3306;Database=LionAbpProDB;uid=root;pwd=1q2w3E*;charset=utf8mb4;Allow User Variables=true;AllowLoadLocalInfile=true"
   } 
 ```  
+- 删除EntityFrameworkCore下Migrations文件夹，重新执行迁移: dotnet ef migrations add Init
 - 右键单击.DbMigrator 项目,设置为启动项目运行，按 F5(或 Ctrl + F5) 运行应用程序
 - 启动后端service下的host项目，访问后台 `http://localhost:44315/login`
 - 登录账号密码 <span style="color:red;font-size:22px">admin/1q2w3E*</span>
