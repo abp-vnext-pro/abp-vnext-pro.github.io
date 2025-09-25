@@ -8,6 +8,24 @@ sidebar:
 - ABP vNext Pro 已集成 Redis 做为缓存。
 - [ABP vNext缓存官方文档](https://abp.io/docs/latest/framework/fundamentals/caching)
 
+## 添加模块
+```csharp
+    [DependsOn(
+        typeof(AbpCachingStackExchangeRedisModule)
+    )]
+    public partial class AbpProHttpApiHostModule : AbpModule
+```
+
+## 注册服务
+在(host层)
+
+```csharp
+public override void ConfigureServices(ServiceConfigurationContext context)
+{
+    context.Services.AddAbpProRedis();
+}
+```
+
 ## 配置
 
 ```json [appsetting.json]

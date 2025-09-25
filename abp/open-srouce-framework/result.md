@@ -97,25 +97,10 @@ public class WrapResultAttribute : Attribute
 ## 注册 Filter
 
 ```csharp
-    /// <summary>
-    /// 异常处理
-    /// </summary>
-    private void ConfigureAbpExceptions(ServiceConfigurationContext context)
-    {
-        context.Services.AddMvc
-        (
-            options =>
-            {
-                options.Filters.Add(typeof(LionExceptionFilter));
-                options.Filters.Add(typeof(LionResultFilter));
-            }
-        );
-    }
-
-    public override void ConfigureServices(ServiceConfigurationContext context)
-    {
-        ConfigureAbpExceptions(context);
-    }
+public override void ConfigureServices(ServiceConfigurationContext context)
+{
+    context.Services.AddAbpProExceptions();
+}
 ```
 
 

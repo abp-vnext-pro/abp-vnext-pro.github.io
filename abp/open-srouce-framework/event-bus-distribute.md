@@ -16,36 +16,36 @@ sidebar:
   - DotNetCore.CAP.RabbitMQ (如果是其它中间件,请安装对应类型)
 - 添加 [DependsOn(typeof(AbpProCapEntityFrameworkCoreModule))] 到你的项目模块类.
 
-## 配置
+## 添加模块
+```csharp
+    [DependsOn(
+        typeof(AbpProCapModule),
+        typeof(AbpProCapEntityFrameworkCoreModule)
+    )]
+    public partial class AbpProHttpApiHostModule : AbpModule
+```
+
+## 注册服务
 在(host层)
 Mysql,和 RabbitMq 为例
 
 ```csharp
 public override void ConfigureServices(ServiceConfigurationContext context)
 {
-    ConfigureServices(context);
+    context.Services.AddAbpProCap()
 }
+```
 
-private void ConfigureCap(ServiceConfigurationContext context)
-{
-    var configuration = context.Services.GetConfiguration();
-    context.AddAbpCap(capOptions =>
-    {
-        capOptions.SetCapDbConnectionString(configuration["ConnectionStrings:Default"]);
-        capOptions.UseEntityFramework<AbpProDbContext>();
-        capOptions.UseRabbitMQ(option =>
-        {
-            option.HostName = configuration.GetValue<string>("Cap:RabbitMq:HostName");
-            option.UserName = configuration.GetValue<string>("Cap:RabbitMq:UserName");
-            option.Password = configuration.GetValue<string>("Cap:RabbitMq:Password");
-            option.Port = configuration.GetValue<int>("Cap:RabbitMq:Port");
-        });
-        capOptions.UseDashboard(options =>
-        {
-            options.AuthorizationPolicy = AbpProCapPermissions.CapManagement.Cap;
-        });
-    });
-}
+## 配置
+```json
+"Cap": {
+    "RabbitMq": {
+      "HostName": "localhost",
+      "UserName": "admin",
+      "Password": "1q2w3E*",
+      "Port": 5672
+    }
+  }
 ```
 
 ## 发布事件
