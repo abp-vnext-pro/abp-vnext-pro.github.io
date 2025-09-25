@@ -8,26 +8,27 @@ sidebar:
 - [ABP vNext分布式锁官方文档](https://abp.io/docs/latest/framework/infrastructure/distributed-locking)
 
 ## 集成
-- 引用Volo.Abp.DistributedLocking包,并且添加模块依赖.
-- 引用DistributedLock.Redis包
+1. 添加模块依赖，在host模块中添加
+
 ```csharp
-namespace AbpDemo
+    [DependsOn(
+        typeof(AbpDistributedLockingModule)
+    )]
+    public partial class AbpProHttpApiHostModule : AbpModule
+```
+2. 注册服务
+```csharp
+public override void ConfigureServices(ServiceConfigurationContext context)
 {
-    [DependsOn(typeof(AbpDistributedLockingModule))]
-    public class MyModule : AbpModule
-    {
-        public override void ConfigureServices(ServiceConfigurationContext context)
-        {
-            var configuration = context.Services.GetConfiguration();
-        
-            context.Services.AddSingleton<IDistributedLockProvider>(sp =>
-            {
-                var connection = ConnectionMultiplexer.Connect(configuration["Redis:Configuration"]);
-                return new RedisDistributedSynchronizationProvider(connection.GetDatabase());
-            });
-        }
-    }
+        context.Services.AddAbpProRedisDistributedLocking();
 }
+```
+
+3. 添加redis配置
+```json
+"Redis": {
+  "Configuration": "localhost:6379,password=1q2w3E*,defaultdatabase=2"
+},
 ```
 
 ## sample
