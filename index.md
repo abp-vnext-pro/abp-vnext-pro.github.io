@@ -36,6 +36,10 @@ features:
     details: Ant Design Vue<br />Element Plus<br />Naive UI<br />
     link: https://doc.vben.pro/
     linkText: UI组件库
+  - icon: 💯
+    title: 移动端支持
+    details: '<small class="bottom-small">基于unibest</small>'
+
   - icon: 🧰
     title: 提效工具
     details: 工欲善其事，必先利其器<br />代码生成器Abp VNext Pro Suite
@@ -46,10 +50,6 @@ features:
     details: 那些年我们踩过的坑<br />总有一些让你意想不到的问题
     link: https://github.com/WangJunZzz/abp-vnext-pro/issues?q=
     linkText: 踩坑记录
-  # - icon: 💯
-  #   title: 吾志所向，一往无前。
-  #   details: '<small class="bottom-small">一个想躺平的小开发</small>'
-  #   link: https://notes.fe-mm.com/mao
 ---
 
 <style>
