@@ -9,11 +9,11 @@ sidebar:
 - vben2.8需要自行调整
 
 ### 启用或者关闭
-```csharp
-public static class MultiTenancyConsts
-{
-    public const bool IsEnabled = true;
-}
+- 在appsetting.json配置
+```json
+  "MultiTenancy": {
+    "Enabled": true
+  }
 ```
 - 如果要关闭租户，只要把IsEnabled设置为false
 

@@ -11,7 +11,7 @@ group:
 
 ::: info 环境要求
 在启动项目前，你需要确保你的环境满足以下要求：
-- [dotnet core 9.0](https://dotnet.microsoft.com/en-us/download/dotnet/9.0)
+- [dotnet core 10.0](https://dotnet.microsoft.com/en-us/download/dotnet/10.0)
 - [nodejs 20.15.0+](https://nodejs.org/zh-cn/)
 - [pnpm](https://www.pnpm.cn/installation)
 - [mysql](https://dev.mysql.com/downloads/installer/)
@@ -95,7 +95,7 @@ VS 编译项目字符串超过 256 个字符,把项目拷贝到磁盘根目录 O
     }
   }  
 ```
-- 修改 DbMigrator-> appsettings.Development.json 数据库连接字符串
+- 修改 DbMigrator-> appsettings.json 数据库连接字符串
 ```json
   "ConnectionStrings": {
     "Default": "Data Source=localhost;Port=3306;Database=LionAbpProDB;uid=root;pwd=1q2w3E*;charset=utf8mb4;Allow User Variables=true;AllowLoadLocalInfile=true"

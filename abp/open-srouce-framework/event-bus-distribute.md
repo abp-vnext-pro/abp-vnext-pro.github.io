@@ -23,13 +23,16 @@ Mysql,和 RabbitMq 为例
 ```csharp
 public override void ConfigureServices(ServiceConfigurationContext context)
 {
-    ConfigureServices(context);
+    context.Services.AddAbpProCap();
 }
 
-private void ConfigureCap(ServiceConfigurationContext context)
+/// <summary>
+/// 注册cap
+/// </summary>
+public static IServiceCollection AddAbpProCap(this IServiceCollection service)
 {
-    var configuration = context.Services.GetConfiguration();
-    context.AddAbpCap(capOptions =>
+    var configuration = service.GetConfiguration();
+    service.AddAbpCap(capOptions =>
     {
         capOptions.SetCapDbConnectionString(configuration["ConnectionStrings:Default"]);
         capOptions.UseEntityFramework<AbpProDbContext>();
@@ -40,11 +43,9 @@ private void ConfigureCap(ServiceConfigurationContext context)
             option.Password = configuration.GetValue<string>("Cap:RabbitMq:Password");
             option.Port = configuration.GetValue<int>("Cap:RabbitMq:Port");
         });
-        capOptions.UseDashboard(options =>
-        {
-            options.AuthorizationPolicy = AbpProCapPermissions.CapManagement.Cap;
-        });
+        capOptions.UseDashboard(options => { options.AuthorizationPolicy = AbpProCapPermissions.CapManagement.Cap; });
     });
+    return service;
 }
 ```
 

@@ -83,31 +83,23 @@ public static void SetSerilogConfiguration(LoggerConfiguration loggerConfigurati
          // 按天输出
         "rollingInterval": "Day"
       }
-    }
+    },
+    {
+        // 输出到es
+        "Name": "Elastic",
+        "Args": {
+          "Enabled": false,
+          "Url": "http://es.cn",
+          "IndexFormat": "Lion.AbpPro.development.{0:yyyy.MM.dd}",
+          "UserName": "elastic",
+          "Password": "aVVhjQ95RP7nbwNy",
+          "ApplicationName": "Lion.AbpPro.HttpApi.Host"
+        }
+     }
   ]
 }
 ```
 
-## 写入 ElasticSearch
-
-> AbpPro 已经集成 ElasticSearch 只需要通过配置文件启用即可。
-
-- Enabled:是否启用
-- Url:es 地址
-- IndexFormat:es 索引
-- UserName:用户名
-- Password:密码
-
-```json [appsetting.json]
-"ElasticSearch": {
-  "Enabled": "false",
-  "Url": "http://es.cn",
-  // 索引名必须小写
-  "IndexFormat": "lion.abppro.development.{0:yyyy.MM.dd}",
-  "UserName": "elastic",
-  "Password": "aVVhjQ95RP7nbwNy"
-},
-```
 
 ## 使用
 

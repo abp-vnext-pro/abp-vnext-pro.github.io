@@ -1,6 +1,6 @@
 ---
 sidebar:
-  sort: 5
+  sort: 7
 ---
 
 # 跨域(CORS)
@@ -8,35 +8,49 @@ sidebar:
 - 允许指定策略
 
 ```json [appsetting.json]
-"App": {
-    // 逗号分隔
-    "CorsOrigins": "http://*.com,http://localhost:4200"
+ "Cors": {
+    "Enabled": true,
+    "CorsOrigins": "http://localhost:4200,http://localhost:4201"
   },
 ```
 
 - 配置跨域
 
 ```csharp
-private void ConfigureCors(ServiceConfigurationContext context)
+public override void ConfigureServices(ServiceConfigurationContext context)
 {
-    var configuration = context.Services.GetConfiguration();
-    context.Services.AddCors(options =>
+       context.Services.AddAbpProCors();
+}
+
+/// <summary>
+/// 配置跨域
+/// </summary>
+public static IServiceCollection AddAbpProCors(this IServiceCollection service)
+{
+    var corsOptions = service.BuildServiceProvider().GetRequiredService<IOptions<AbpProCorsOptions>>().Value;
+    if (!corsOptions.Enabled) return service;
+    
+    service.AddCors(options =>
     {
-        options.AddPolicy(DefaultCorsPolicyName, builder =>
+        options.AddPolicy(AbpProAspNetCoreConsts.DefaultCorsPolicyName, builder =>
         {
             builder
                 .WithOrigins(
-                    configuration["App:CorsOrigins"]
+                    corsOptions.CorsOrigins
                         .Split(",", StringSplitOptions.RemoveEmptyEntries)
                         .Select(o => o.RemovePostFix("/"))
                         .ToArray()
                 )
-                .WithAbpExposedHeaders()
+                //.WithAbpExposedHeaders()
                 .SetIsOriginAllowedToAllowWildcardSubdomains()
                 .AllowAnyHeader()
                 .AllowAnyMethod()
-                .AllowCredentials();
+                //.AllowCredentials()
+                // https://www.cnblogs.com/JulianHuang/p/14225515.html
+                // https://learn.microsoft.com/zh-cn/aspnet/core/security/cors?view=aspnetcore-7.0
+                .SetPreflightMaxAge((TimeSpan.FromHours(24)));
         });
     });
+    return service;
 }
 ```

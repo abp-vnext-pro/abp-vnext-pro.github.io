@@ -18,15 +18,23 @@ namespace AbpDemo
     {
         public override void ConfigureServices(ServiceConfigurationContext context)
         {
-            var configuration = context.Services.GetConfiguration();
-        
-            context.Services.AddSingleton<IDistributedLockProvider>(sp =>
-            {
-                var connection = ConnectionMultiplexer.Connect(configuration["Redis:Configuration"]);
-                return new RedisDistributedSynchronizationProvider(connection.GetDatabase());
-            });
+            context.Services.AddAbpProRedisDistributedLocking();
         }
-    }
+
+    /// <summary>
+    /// 注册redis分布式锁
+    /// </summary>
+    public static IServiceCollection AddAbpProRedisDistributedLocking(this IServiceCollection service)
+    {
+        var configuration = service.GetConfiguration();
+        var connectionString = configuration.GetValue<string>("Redis:Configuration");
+        service.AddSingleton<IDistributedLockProvider>(sp =>
+        {
+            var connection = ConnectionMultiplexer.Connect(connectionString);
+            return new RedisDistributedSynchronizationProvider(connection.GetDatabase());
+        });
+        return service;
+    }    
 }
 ```
 

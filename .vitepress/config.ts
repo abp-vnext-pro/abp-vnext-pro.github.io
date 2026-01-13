@@ -24,8 +24,9 @@ export default defineConfigWithTheme<ThemeConfig>({
       },
     },
     nav: [
-      { text: "👉🏻Abp文档", link: "/abp/quick-start/" },
+      { text: "👉🏻AbpPro文档", link: "/abp/quick-start/" },
       { text: "👉🏻Vben5文档", link: "/vben5/" },
+      { text: "👉🏻Abp源码分析", link: "/abp-source/" },
       {
         text: "演示",
         items: [
@@ -46,6 +47,7 @@ export default defineConfigWithTheme<ThemeConfig>({
     sidebar: {
       "/abp/": "auto",
       "/vben5/": "auto",
+      "/abp-source/": "auto",
     },
     footer: {
       message: "如有转载或 CV 的请标注本站原文地址",
