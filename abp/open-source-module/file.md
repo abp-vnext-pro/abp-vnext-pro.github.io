@@ -67,6 +67,35 @@ Configure<AbpBlobStoringOptions>(options =>
 });
 
 ```
+### TencentCloud Provider
+- 使用腾讯云oss
+1. 添加Lion.AbpPro.BlobStoring.TencentCloud引用
+2. 添加[DependsOn(typeof(AbpProBlobStoringTencentCloudModule))]依赖
+3. 配置，在http.host的module下添加一下配置
+
+```csharp
+Configure<AbpBlobStoringOptions>(options =>
+{
+    options.Containers.ConfigureAll((containerName, containerConfiguration) =>
+    {
+        containerConfiguration.UseTencentCloud(tencentCloud =>
+        {
+            tencentCloud.AppId = "YourAppId";
+            tencentCloud.SecretId = "YourSecretId";
+            tencentCloud.SecretKey = "YourSecretKey";
+            tencentCloud.Region = "YourRegion";
+
+            tencentCloud.KeyDurationSecond = 600;
+            tencentCloud.ReadWriteTimeout = 40;
+            tencentCloud.ConnectionTimeout = 60;
+
+            tencentCloud.ContainerName = "your tencent cloud container name";
+            tencentCloud.CreateContainerIfNotExists = true;
+        });
+    });
+});
+
+```
 
 ### Azure Provider
 - 使用Azure oss
@@ -188,6 +217,9 @@ Configure<AbpBlobStoringOptions>(options =>
         container.UseDatabase();
     });
 });
+```
+
+
 ```
 
 ### 自定义Provider

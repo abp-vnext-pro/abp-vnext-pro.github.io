@@ -5,6 +5,7 @@ sidebar:
 
 ::: tip 注意
 - 如果切换PostgreSQL,请添加一下设置
+- 在xxxEntityFrameworkCoreModule的PreConfigureServices添加一下代码
 - AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
 - [官方说明](https://abp.io/docs/latest/framework/data/entity-framework-core/postgresql)
 :::

@@ -23,3 +23,22 @@ outline: deep
 ```
 ### 调用接口
 - 这个时候直接注入BookStore的service接口就可以在你的其他服务中调用BookStore服务了。
+
+### 如何传递token
+- 默认情况下，远程服务调用将使用当前用户的访问令牌。但是，您可以通过将访问令牌传递给远程服务调用来覆盖此默认行为。
+
+```csharp
+[Dependency(ReplaceServices = true)]
+[ExposeServices(typeof(IRemoteServiceHttpClientAuthenticator))]
+public class AccessTokenRemoteServiceHttpClientAuthenticator : IRemoteServiceHttpClientAuthenticator, ITransientDependency
+{
+   
+    public async Task Authenticate(RemoteServiceHttpClientAuthenticateContext context)
+    {
+  
+            // 获取token
+            context.Request.SetBearerToken(currentAccessToken);
+        }
+    }
+}
+```
