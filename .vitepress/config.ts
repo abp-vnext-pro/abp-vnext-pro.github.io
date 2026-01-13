@@ -7,9 +7,21 @@ export default defineConfigWithTheme<ThemeConfig>({
   extends: baseConfig,
   lang: "zh",
   ignoreDeadLinks: true,
+  /* markdown 配置 */
+  markdown: {
+    lineNumbers: true,
+    image: {
+      lazyLoading: true,
+    },
+  },
   themeConfig: {
     progressBar: {
       speed: 200,
+    },
+    /* 右侧大纲配置 */
+    outline: {
+      level: 'deep',
+      label: '目录',
     },
     logo: "/logo.png",
     search: {
