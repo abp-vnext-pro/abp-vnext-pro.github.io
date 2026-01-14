@@ -3,9 +3,7 @@ sidebar:
   sort: 2
 ---
 
-## 快速开发
-
-* 此片文章讲如何使用abp vnext pro 进行一个快速的curd的开发。
+# 快速开发
 
 ## 定义后端接口
 ::: danger 注意

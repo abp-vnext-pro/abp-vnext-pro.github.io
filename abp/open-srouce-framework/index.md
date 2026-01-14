@@ -1,11 +1,11 @@
 ---
 group:
-  icon: meteor-icons:microchip
   text: 功能
   sort: 2
+  collapsed: true
 ---
 
-## 登录
+# 登录
 ::: tip 注意
 - ABP vNext Pro 没有集成 IdentityServer4 或者 OpenIddict,而是直接使用默认的 Asp Net Core Identity。
 - vben5版本对接第三方登录，如：Github,Gitee等,只要是oauth2协议，都提供了扩展。

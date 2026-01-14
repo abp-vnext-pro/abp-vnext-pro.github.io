@@ -1,8 +1,8 @@
 ---
 group:
-  icon: meteor-icons:sparkles
-  text: Vben5模块
+  text: 💎Vben5模块
   sort: 5
+  collapsed: true
 ---
 
 # 动态菜单模块

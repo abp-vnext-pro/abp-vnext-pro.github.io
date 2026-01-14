@@ -1,7 +1,8 @@
 ---
 sidebar:
-  sort: 8
+  sort: 13
 ---
+# 切换数据库
 
 ::: tip 注意
 - 如果切换PostgreSQL,请添加一下设置
@@ -10,7 +11,7 @@ sidebar:
 - [官方说明](https://abp.io/docs/latest/framework/data/entity-framework-core/postgresql)
 :::
 
-# 切换数据库
+
 - 当前默认数据库是mysql
 - 以下操作将演示如何切换数据库,从mysql切换到sqlserver
 - 其它数据库流程类似，Oracle可能需要额外修改

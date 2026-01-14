@@ -1,9 +1,10 @@
 ---
 sidebar:
-  sort: 8
+  sort: 11
 ---
 
-## 集成Dapper
+#  Dapper
+
 1. 在EntityFrameworkCore层添加Volo.Abp.Dapper包引用
 2. 在EntityFrameworkCore层添加AbpDapperModule模块依赖
 3. 在domain层定义接口IPersonDapperRepository

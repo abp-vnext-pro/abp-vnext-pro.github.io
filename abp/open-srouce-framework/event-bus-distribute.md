@@ -1,6 +1,6 @@
 ---
 sidebar:
-  sort: 6
+  sort: 9
 ---
 
 # 分布式事件

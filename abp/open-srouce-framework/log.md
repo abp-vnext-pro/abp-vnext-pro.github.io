@@ -1,11 +1,11 @@
 ---
 sidebar:
-  sort: 6
+  sort: 3.1
 ---
 
-# 日志(Serilog)
-
-> ABP 框架没有实现任何日志基础设施. 它使用 ASP.NET Core 日志系统.
+# 日志
+- ABP 框架没有实现任何日志基础设施. 它使用 ASP.NET Core 日志系统.
+- 默认Serilog
 
 ## 日志等级
 ::: danger 注意

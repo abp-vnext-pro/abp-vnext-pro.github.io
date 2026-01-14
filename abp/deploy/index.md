@@ -1,8 +1,8 @@
 ---
 group:
-  icon: meteor-icons:microchip
   text: 部署
   sort: 6
+  collapsed: true  
 ---
 
 # Docker 部署

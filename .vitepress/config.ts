@@ -66,5 +66,17 @@ export default defineConfigWithTheme<ThemeConfig>({
       copyright:
         'Copyright © 2025 韩跑跑 <a href="https://github.com/WangJunZzz/abp-vnext-pro">WangJunZzz</a>',
     },
+    docFooter: {
+      prev: '上一篇',
+      next: '下一篇',
+    },
+    
+    lastUpdated: {
+      text: '最后更新于',
+      formatOptions: {
+        dateStyle: 'short',
+        timeStyle: 'medium',
+      },
+    },
   },
 });

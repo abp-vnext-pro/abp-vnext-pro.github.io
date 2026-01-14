@@ -1,10 +1,9 @@
 ---
-outline: deep
+sidebar:
+  sort: 18
 ---
 
 # 统一返回值格式
-
-## 使用
 
 - 在 Controller 上或者 Action 上打上 WrapResultAttribute 特性
 ```csharp

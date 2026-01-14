@@ -1,6 +1,6 @@
 ---
 group:
-  text: 简介
-  sort: 1
+  text: 常见问题
+  sort: 8
   collapsed: true    
 ---

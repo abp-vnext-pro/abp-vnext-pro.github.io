@@ -1,6 +1,6 @@
 ---
 sidebar:
-  sort: 7
+  sort: 5
 ---
 
 # 权限

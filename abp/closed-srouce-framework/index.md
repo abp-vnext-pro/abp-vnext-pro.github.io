@@ -1,8 +1,8 @@
 ---
 group:
-  icon: meteor-icons:sparkles 
-  text: Vben5功能
-  sort: 3
+  text: 💎Vben5功能
+  sort: 4
+  collapsed: true  
 ---
 
 ::: tip 注意

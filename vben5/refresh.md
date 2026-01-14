@@ -1,13 +1,10 @@
----
-outline: deep
----
+# 静默刷新
 ::: tip 前言
 
 在Web应用中，用户认证 token（如 JWT）通常有有效期限制。为了提升用户体验，避免频繁重新登录，可以通过 refreshToken 机制实现 token 的自动续期。
 
 :::
 
-## 静默刷新
 
 ### 刷新Token
 1. 使用axios拦截请求(api-client-config/index.ts)

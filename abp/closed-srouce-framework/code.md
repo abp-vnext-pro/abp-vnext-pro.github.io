@@ -1,10 +1,11 @@
+# 代码生成器
+
 ::: tip 注意
 - 当前模块需要付费使用,需要找作者购买源码(购买vben5版本即可)
 - 联系方式: 510423039@qq.com
 - 微信号：WJLXRzzZ
 :::
 
-### 安装Cli
 ```bash
 dotnet tool install Lion.AbpPro.Cli -g
 ```

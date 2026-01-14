@@ -1,10 +1,10 @@
 ---
 sidebar:
-  sort: 5
+  sort: 8
 ---
 
-## 本地事件
-- 本地事件总线允许服务发布和订阅in-process events.这意味着，如果两个服务 （发布者和订阅者） 在同一进程中运行，则它是合适的。
+# 本地事件
+- 本地事件总线允许服务发布和订阅这意味着，如果两个服务 （发布者和订阅者） 在同一进程中运行，则它是合适的。
 - [ABP vNext本地事件官方文档](https://abp.io/docs/latest/framework/infrastructure/event-bus/local)
 
 ## 发布事件
@@ -78,6 +78,25 @@ namespace AbpDemo
                 }
             );
         }
+    }
+}
+```
+
+## 订阅事件
+
+```csharp
+public class ChangedAbpUserLocalEventHandler: ILocalEventHandler<StockCountChangedEvent>, ITransientDependency
+{
+    private readonly IDistributedEventBus _distributedEventBus;
+
+    public ChangedAbpUserLocalEventHandler(IDistributedEventBus distributedEventBus)
+    {
+        _distributedEventBus = distributedEventBus;
+    }
+
+    public async Task HandleEventAsync(StockCountChangedEvent eventData)
+    {
+       // todo: handle event
     }
 }
 ```

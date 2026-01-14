@@ -1,4 +1,10 @@
-## ABP 8.x迁移9.x版迁移指南
+---
+group:
+  text: 迁移指南
+  sort: 6
+  collapsed: true  
+---
+# ABP 8.x迁移9.x版迁移指南
 
 1. 调整解决方案替换 <TargetFramework>net8.0</TargetFramework> --> <TargetFramework>net9.0</TargetFramework>
 2. 把9.0版本的**Directory.Build.targets**复制到你的项目，或者对应nuget版本一个一个修改。

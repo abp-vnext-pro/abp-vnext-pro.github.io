@@ -1,8 +1,8 @@
 ---
-outline: deep
+sidebar:
+  sort: 2
+  text: 前端 
 ---
-
-# 常见问题
 
 ## 依赖问题
 

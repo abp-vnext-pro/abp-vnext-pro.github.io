@@ -7,7 +7,7 @@ sidebar:
 
 本文档介绍如何在ABP项目中集成并使用Hangfire作为后台任务处理框架，采用Redis进行持久化存储。
 
-[[toc]]
+
 
 ## 集成 Hangfire
 

@@ -1,6 +1,6 @@
 ---
 sidebar:
-  sort: 8
+  sort: 15
 ---
 
 # 快速Curd
@@ -28,6 +28,9 @@ public class DemoAggregate : FullAuditedAggregateRoot<Guid>, IMultiTenant
     public string Description { get; set; }
 }
 ```
+
+2. 配置ef,并迁移生成数据库
+
 
 ## Application.Contracts层
 

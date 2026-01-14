@@ -1,9 +1,10 @@
 ---
 sidebar:
-  sort: 8
+  sort: 16
 ---
 
-## Ocelot+Consul
+# 网关
+- 基于Ocelot+Consul
 
 ## 服务注册
 

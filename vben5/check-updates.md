@@ -1,8 +1,4 @@
----
-outline: deep
----
-
-## 介绍
+# 介绍
 
 当网站有更新时，您可能需要检查更新。框架提供了这一功能，通过定时检查更新，您可以在应用的 preferences.ts 文件中配置 `checkUpdatesInterval`和 `enableCheckUpdates` 字段，以开启和设置检查更新的时间间隔（单位：分钟）。
 

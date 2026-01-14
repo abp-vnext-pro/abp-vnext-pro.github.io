@@ -1,6 +1,6 @@
 ---
 sidebar:
-  sort: 4
+  sort: 6
 ---
 
 # 缓存
@@ -10,10 +10,10 @@ sidebar:
 
 ## 添加模块
 ```csharp
-    [DependsOn(
-        typeof(AbpCachingStackExchangeRedisModule)
-    )]
-    public partial class AbpProHttpApiHostModule : AbpModule
+[DependsOn(
+    typeof(AbpCachingStackExchangeRedisModule)
+)]
+public partial class AbpProHttpApiHostModule : AbpModule
 ```
 
 ## 注册服务
@@ -30,9 +30,10 @@ public override void ConfigureServices(ServiceConfigurationContext context)
 
 ```json [appsetting.json]
 "Redis":
-  {
-     "Configuration": "localhost,password=1q2w3E*,defaultdatabase=1"
-  }
+{
+   "IsEnabled": true,
+   "Configuration": "localhost,password=1q2w3E*,defaultdatabase=1"
+}
 ```
 
 ### AbpDistributedCacheOptions

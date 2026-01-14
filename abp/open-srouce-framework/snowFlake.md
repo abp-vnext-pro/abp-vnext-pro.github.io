@@ -1,4 +1,8 @@
-## 雪花算法
+---
+sidebar:
+  sort: 25
+---
+# 雪花算法
 
 - 基于Yitter.IdGenerator
 - [github源码地址](https://github.com/yitter/IdGenerator/tree/master)

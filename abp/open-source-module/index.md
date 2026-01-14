@@ -1,8 +1,8 @@
 ---
 group:
-  icon: meteor-icons:grid 
   text: 模块
-  sort: 4
+  sort: 3
+  collapsed: true  
 ---
 
 # 基础模块
