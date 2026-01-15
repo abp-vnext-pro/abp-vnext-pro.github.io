@@ -1,3 +1,7 @@
+---
+sidebar:
+  sort: 4
+---
 # 多语言模块
 ::: info LanguageManagement
 
