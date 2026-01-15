@@ -36,7 +36,7 @@ export default defineConfigWithTheme<ThemeConfig>({
       },
     },
     nav: [
-      { text: "👉🏻AbpPro文档", link: "/abp/quick-start/" },
+      { text: "👉🏻AbpPro文档", link: "/abp/quick-start/quick-start" },
       { text: "👉🏻Vben5文档", link: "/vben5/" },
       { text: "👉🏻Abp源码分析", link: "/abp-source/" },
       {

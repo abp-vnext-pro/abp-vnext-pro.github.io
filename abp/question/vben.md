@@ -64,11 +64,6 @@ sidebar:
 
 - 开启 gzip 的同时还可以同时开启 `brotli`，比 gzip 更好的压缩。两者可以共存
 
-**注意**
-
-- gzip_static: 这个模块需要 nginx 另外安装，默认的 nginx 没有安装这个模块。
-
-- 开启 `brotli` 也需要 nginx 另外安装模块
 
 ## 内网部署，图标加载不出来
 - 以antd版本为例
@@ -105,3 +100,7 @@ addCollection(MdiIcons);
 addCollection(EpIcons);
 
 ```
+
+## 生产环境动态配置
+- 项目在打包后，需要动态修改配置的需求，如接口地址。不用重新进行打包，可在打包后修改 /dist/_app.config.js 内的变量，刷新即可更新代码内的局部变量
+- [请参考完整文章如何使用动态配置](/vben5/setting/)
