@@ -78,5 +78,22 @@ export default defineConfigWithTheme<ThemeConfig>({
         timeStyle: 'medium',
       },
     },
+   
   },
+  head:[
+    [
+      'script',
+      {},
+      `
+      window._hmt = window._hmt || [];
+      (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?6e3eac7425b90567067d3f21628c1f8f";
+          var s = document.getElementsByTagName("script")[0]; 
+          s.parentNode.insertBefore(hm, s);
+      })();
+      `,
+  ],
+],
+
 });
