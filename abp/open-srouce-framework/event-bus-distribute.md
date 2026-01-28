@@ -10,6 +10,7 @@ sidebar:
 ## 安装
 
 - 添加以下 NuGet 包到你的项目(host层)
+  - DotNetCore.CAP.Dashboard
   - Lion.AbpPro.CAP
   - Lion.AbpPro.CAP.EntityFrameworkCore
   - DotNetCore.CAP.MySql (如果是其它数据库,请安装对应类型)
