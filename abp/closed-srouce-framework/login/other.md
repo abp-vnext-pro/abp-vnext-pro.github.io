@@ -1,4 +1,9 @@
-# 第三方登录
+---
+sidebar:
+  sort: 1
+---
+
+# 集成第三方登录
 ::: tip 注意
 - 当前模块需要付费使用,需要找作者购买源码(购买vben5版本即可)
 - 联系方式: 510423039@qq.com
@@ -10,13 +15,6 @@
 例如，一个网站允许用户使用微信账号登录，而不是要求用户在该电商网站上重新注册账号并设置密码。用户点击微信登录按钮后，会跳转到微信授权页面，在用户授权后，电商网站就可以获取用户的基本信息（如头像、昵称等），从而完成登录流程。
 ::: 
 
-
-### Github登录
-
-1. 添加引用Lion.AbpPro.Oidc
-2. 添加AbpProOidcModule模块依赖
-3. 通过setting配置github登录相关
-![](https://lion-foods.oss-cn-beijing.aliyuncs.com/vben5/login-github.png)
 
 
 ### 如何集成其他登录方式
