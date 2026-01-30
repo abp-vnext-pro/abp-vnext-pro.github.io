@@ -36,14 +36,46 @@ features:
     details: 基于Vue3、Vite、TypeScript等最新技术栈开发
     link: https://doc.vvbin.cn/
     linkText: Vben2.8官方文档
-  - icon: 💡
-    title: 多UI组件库支持
-    details: Ant Design Vue<br />Element Plus<br />Naive UI<br />
-    link: https://doc.vben.pro/
-    linkText: UI组件库
+  - icon: 🦄
+    title: 丰富的配置
+    details: 企业级中后台前端解决方案，提供丰富的组件和模板以及 N 种偏好设置组合方案。
+    link: 
+    linkText: 配置文档
+  - icon: 🎨
+    title: 主题定制
+    details: 通过简单的配置，即可实现各种主题切换，满足个性化需求。
+    link: 
+    linkText: 主题文档
+  - icon: 🌐
+    title: 国际化
+    details: 内置国际化方案，支持多语言切换，满足国际化需求。
+    link: 
+    linkText: 国际化文档
+  - icon: 🔐
+    title: 权限管理
+    details: 内置权限管理方案，支持多种权限控制方式，满足各种权限需求。
+    link: 
+    linkText: 权限文档   
+  - icon: 🚀
+    title: 多租户支持
+    details: 内置租户方案，满足各种Saas需求。
+    link: 
+    linkText: 多租户       
+  - icon: 🔐
+    title: 代码生成
+    details: 内置代码生成模块,快速实现业务开发。
+    link: 
+    linkText: 代码生成          
   - icon: 💯
     title: 移动端支持
-    details: '<small class="bottom-small">基于unibest</small>'
+    details: 基于unibest,最好的 uniapp 框架
+    link: https://unibest.tech/
+    linkText: unibest  
+  - icon: 🦄
+    title: 定制开发
+    details: 支持定制开发，请联系作者。
+    link: 
+    linkText: 定制开发 
   - icon: 🐞
     title: 踩坑记录
     details: 那些年我们踩过的坑<br />总有一些让你意想不到的问题
