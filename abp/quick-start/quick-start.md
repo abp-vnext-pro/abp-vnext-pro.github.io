@@ -12,7 +12,7 @@ sidebar:
 - [dotnet core 10.0](https://dotnet.microsoft.com/en-us/download/dotnet/10.0)
 - [nodejs 20.15.0+](https://nodejs.org/zh-cn/)
 - [pnpm](https://www.pnpm.cn/installation)
-- [mysql](https://dev.mysql.com/downloads/installer/)
+- [postgreSQL](https://www.postgresql.org/)
 - [redis](https://redis.io/docs/getting-started/installation/)
 - [rabbitmq 可选](https://www.rabbitmq.com/download.html)
 
@@ -79,7 +79,7 @@ VS 编译项目字符串超过 256 个字符,把项目拷贝到磁盘根目录 O
   - RabbitMQ 连接字符串(可选)
 ```json
   "ConnectionStrings": {
-    "Default": "Data Source=localhost;Port=3306;Database=LionAbpProDB;uid=root;pwd=1q2w3E*;charset=utf8mb4;Allow User Variables=true;AllowLoadLocalInfile=true"
+    "Default": "User ID=postgres;Password=1q2w3E*;Host=localhost;Port=5432;Database=LionAbpProDbVben5;"
   },
   "Redis": {
     "Configuration": "localhost:6379,password=1q2w3E*,defaultdatabase=1"
@@ -96,7 +96,7 @@ VS 编译项目字符串超过 256 个字符,把项目拷贝到磁盘根目录 O
 - 修改 DbMigrator-> appsettings.json 数据库连接字符串
 ```json
   "ConnectionStrings": {
-    "Default": "Data Source=localhost;Port=3306;Database=LionAbpProDB;uid=root;pwd=1q2w3E*;charset=utf8mb4;Allow User Variables=true;AllowLoadLocalInfile=true"
+    "Default": "User ID=postgres;Password=1q2w3E*;Host=localhost;Port=5432;Database=LionAbpProDbVben5;"
   } 
 ```  
 - 删除EntityFrameworkCore下Migrations文件夹，重新执行迁移: dotnet ef migrations add Init
