@@ -74,7 +74,7 @@ VS 编译项目字符串超过 256 个字符,把项目拷贝到磁盘根目录 O
 
 ### 修改配置
 - 修改service下 xxx.HttpApi.Host-> appsettings.Development.json 配置
-  - Mysql 连接字符串
+  - PostgreSQL 连接字符串
   - Redis 连接字符串
   - RabbitMQ 连接字符串(可选)
 ```json
